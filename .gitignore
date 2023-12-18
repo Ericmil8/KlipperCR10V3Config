@@ -1,2 +1,8 @@
 .env
 secrets.conf
+.gitignore
+.env.swap
+.install.sh
+script.sh
+version
+.env.example
