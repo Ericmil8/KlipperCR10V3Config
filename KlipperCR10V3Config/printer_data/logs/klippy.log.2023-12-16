@@ -1,0 +1,4419 @@
+Starting Klippy...
+Args: ['/home/Ericmil8/klipper/klippy/klippy.py', '/home/Ericmil8/printer_data/config/printer.cfg', '-I', '/home/Ericmil8/printer_data/comms/klippy.serial', '-l', '/home/Ericmil8/printer_data/logs/klippy.log', '-a', '/home/Ericmil8/printer_data/comms/klippy.sock']
+Git version: 'v0.12.0-35-g2defd737'
+Branch: master
+Remote: origin
+Tracked URL: https://github.com/Klipper3d/klipper
+CPU: 4 core ?
+Python: '3.9.2 (default, Feb 28 2021, 17:03:44) \n[GCC 10.2.1 20210110]'
+Building C code module c_helper.so
+Start printer at Sat Dec 16 23:05:17 2023 (1702789517.0 1136.7)
+===== Config file =====
+[mcu]
+serial = /dev/serial/by-id/<your-mcu-id>
+
+[virtual_sdcard]
+path = /home/Ericmil8/printer_data/gcodes
+on_error_gcode = CANCEL_PRINT
+
+[printer]
+kinematics = none
+max_velocity = 1000
+max_accel = 1000
+=======================
+mcu 'mcu': Starting serial connect
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+MCU error during connect
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 801, in _mcu_identify
+    self._serial.connect_uart(self._serialport, self._baud, rts)
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 182, in connect_uart
+    self._error("Unable to connect")
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 61, in _error
+    raise error(self.warn_prefix + (msg % params))
+serialhdl.error: mcu 'mcu': Unable to connect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 176, in _connect
+    self.send_event("klippy:mcu_identify")
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in send_event
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in <listcomp>
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 806, in _mcu_identify
+    raise error(str(e))
+mcu.error: mcu 'mcu': Unable to connect
+No build file /home/Ericmil8/klipper/klippy/../.config
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.dict
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.elf
+webhooks client 547761242512: New connection
+webhooks client 547761242512: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+webhooks client 547761242512: Disconnected
+webhooks client 547778196048: New connection
+webhooks client 547778196048: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+Starting Klippy...
+Args: ['/home/Ericmil8/klipper/klippy/klippy.py', '/home/Ericmil8/printer_data/config/printer.cfg', '-I', '/home/Ericmil8/printer_data/comms/klippy.serial', '-l', '/home/Ericmil8/printer_data/logs/klippy.log', '-a', '/home/Ericmil8/printer_data/comms/klippy.sock']
+Git version: 'v0.12.0-35-g2defd737'
+Branch: master
+Remote: origin
+Tracked URL: https://github.com/Klipper3d/klipper
+CPU: 4 core ?
+Python: '3.9.2 (default, Feb 28 2021, 17:03:44) \n[GCC 10.2.1 20210110]'
+Start printer at Sat Dec 16 23:28:43 2023 (1702790923.6 21.6)
+===== Config file =====
+[virtual_sdcard]
+path = /home/Ericmil8/printer_data/gcodes
+on_error_gcode = CANCEL_PRINT
+
+[pause_resume]
+
+[display_status]
+
+[respond]
+
+[gcode_macro CANCEL_PRINT]
+description = Cancel the actual running print
+rename_existing = CANCEL_PRINT_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set allow_park = client.park_at_cancel | default(false) | lower == 'true' %}
+	{% set retract = client.cancel_retract | default(5.0) | abs %}
+	
+	{% set park_x = "" if (client.park_at_cancel_x | default(none) is none)
+	else "X=" ~ client.park_at_cancel_x %}
+	{% set park_y = "" if (client.park_at_cancel_y | default(none) is none)
+	else "Y=" ~ client.park_at_cancel_y %}
+	{% set custom_park = park_x | length > 0 or park_y | length > 0 %}
+	
+	
+	{% if printer['gcode_macro RESUME'].restore_idle_timeout > 0 %}
+	SET_IDLE_TIMEOUT TIMEOUT={printer['gcode_macro RESUME'].restore_idle_timeout}
+	{% endif %}
+	{% if (custom_park or not printer.pause_resume.is_paused) and allow_park %} _TOOLHEAD_PARK_PAUSE_CANCEL {park_x} {park_y} {% endif %}
+	_CLIENT_RETRACT LENGTH={retract}
+	TURN_OFF_HEATERS
+	M106 S0
+	{client.user_cancel_macro | default("")}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	SET_PAUSE_AT_LAYER ENABLE=0 LAYER=0
+	CANCEL_PRINT_BASE
+
+[gcode_macro PAUSE]
+description = Pause the actual running print
+rename_existing = PAUSE_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set idle_timeout = client.idle_timeout | default(0) %}
+	{% set temp = printer[printer.toolhead.extruder].target if printer.toolhead.extruder != '' else 0 %}
+	{% set restore = False if printer.toolhead.extruder == ''
+	else True  if params.RESTORE | default(1) | int == 1 else False %}
+	
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=last_extruder_temp VALUE="{{'restore': restore, 'temp': temp}}"
+	
+	{% if idle_timeout > 0 %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=restore_idle_timeout VALUE={printer.configfile.settings.idle_timeout.timeout}
+	SET_IDLE_TIMEOUT TIMEOUT={idle_timeout}
+	{% endif %}
+	PAUSE_BASE
+	{client.user_pause_macro | default("")}
+	_TOOLHEAD_PARK_PAUSE_CANCEL {rawparams}
+
+[gcode_macro RESUME]
+description = Resume the actual running print
+rename_existing = RESUME_BASE
+variable_last_extruder_temp = {'restore': False, 'temp': 0}
+variable_restore_idle_timeout = 0
+variable_idle_state = False
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set sp_move = client.speed_move | default(velocity) %}
+	{% set runout_resume = True if client.runout_sensor | default("") == ""
+	else True if not printer[client.runout_sensor].enabled
+	else printer[client.runout_sensor].filament_detected %}
+	{% set can_extrude = True if printer.toolhead.extruder == ''
+	else printer[printer.toolhead.extruder].can_extrude %}
+	{% set do_resume = False %}
+	
+	
+	{% if printer.idle_timeout.state | upper == "IDLE" or idle_state %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	{% if last_extruder_temp.restore %}
+	
+	RESPOND TYPE=echo MSG='{"Restoring \"%s\" temperature to %3.1f\u00B0C, this may take some time" % (printer.toolhead.extruder, last_extruder_temp.temp) }'
+	M109 S{last_extruder_temp.temp}
+	{% set do_resume = True %}
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	{% if runout_resume %}
+	{% if do_resume %}
+	{% if restore_idle_timeout > 0 %} SET_IDLE_TIMEOUT TIMEOUT={restore_idle_timeout} {% endif %}
+	{client.user_resume_macro | default("")}
+	_CLIENT_EXTRUDE
+	RESUME_BASE VELOCITY={params.VELOCITY | default(sp_move)}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" detects no filament, please load filament and press RESUME" % (client.runout_sensor.split(" "))[1]}'
+	{% endif %}
+
+[gcode_macro SET_PAUSE_NEXT_LAYER]
+description = Enable a pause if the next layer is reached
+gcode = 
+	{% set pause_next_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_next_layer %}
+	{% set ENABLE = params.ENABLE | default(1) | int != 0 %}
+	{% set MACRO = params.MACRO | default(pause_next_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_next_layer VALUE="{{ 'enable': ENABLE, 'call': MACRO }}"
+
+[gcode_macro SET_PAUSE_AT_LAYER]
+description = Enable/disable a pause if a given layer number is reached
+gcode = 
+	{% set pause_at_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_at_layer %}
+	{% set ENABLE = params.ENABLE | int != 0 if params.ENABLE is defined
+	else params.LAYER is defined %}
+	{% set LAYER = params.LAYER | default(pause_at_layer.layer) | int %}
+	{% set MACRO = params.MACRO | default(pause_at_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_at_layer VALUE="{{ 'enable': ENABLE, 'layer': LAYER, 'call': MACRO }}"
+
+[gcode_macro SET_PRINT_STATS_INFO]
+rename_existing = SET_PRINT_STATS_INFO_BASE
+description = Overwrite, to get pause_next_layer and pause_at_layer feature
+variable_pause_next_layer = { 'enable': False, 'call': "PAUSE" }
+variable_pause_at_layer = { 'enable': False, 'layer': 0, 'call': "PAUSE" }
+gcode = 
+	{% if pause_next_layer.enable %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_next_layer" % pause_next_layer.call}'
+	{pause_next_layer.call}
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	{% elif pause_at_layer.enable and params.CURRENT_LAYER is defined and params.CURRENT_LAYER | int == pause_at_layer.layer %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_at_layer [%d]" % (pause_at_layer.call, pause_at_layer.layer)}'
+	{pause_at_layer.call}
+	SET_PAUSE_AT_LAYER ENABLE=0
+	{% endif %}
+	SET_PRINT_STATS_INFO_BASE {rawparams}
+
+[gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL]
+description = Helper: park toolhead used in PAUSE and CANCEL_PRINT
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set use_custom     = client.use_custom_pos | default(false) | lower == 'true' %}
+	{% set custom_park_x  = client.custom_park_x | default(0.0) %}
+	{% set custom_park_y  = client.custom_park_y | default(0.0) %}
+	{% set park_dz        = client.custom_park_dz | default(2.0) | abs %}
+	{% set sp_hop         = client.speed_hop | default(15) * 60 %}
+	{% set sp_move        = client.speed_move | default(velocity) * 60 %}
+	
+	{% set origin    = printer.gcode_move.homing_origin %}
+	{% set act       = printer.gcode_move.gcode_position %}
+	{% set max       = printer.toolhead.axis_maximum %}
+	{% set cone      = printer.toolhead.cone_start_z | default(max.z) %}
+	{% set round_bed = True if printer.configfile.settings.printer.kinematics is in ['delta','polar','rotary_delta','winch']
+	else False %}
+	
+	{% set z_min = params.Z_MIN | default(0) | float %}
+	{% set z_park = [[(act.z + park_dz), z_min] | max, (max.z - origin.z)] | min %}
+	{% set x_park = params.X       if params.X is defined
+	else custom_park_x  if use_custom
+	else 0.0            if round_bed
+	else (max.x - 5.0) %}
+	{% set y_park = params.Y       if params.Y is defined
+	else custom_park_y  if use_custom
+	else (max.y - 5.0)  if round_bed and z_park < cone
+	else 0.0            if round_bed
+	else (max.y - 5.0) %}
+	
+	_CLIENT_RETRACT
+	{% if "xyz" in printer.toolhead.homed_axes %}
+	G90
+	G1 Z{z_park} F{sp_hop}
+	G1 X{x_park} Y{y_park} F{sp_move}
+	{% if not printer.gcode_move.absolute_coordinates %} G91 {% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='Printer not homed'
+	{% endif %}
+
+[gcode_macro _CLIENT_EXTRUDE]
+description = Extrudes, if the extruder is hot enough
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set use_fw_retract = (client.use_fw_retract | default(false) | lower == 'true') and (printer.firmware_retraction is defined) %}
+	{% set length = params.LENGTH | default(client.unretract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_unretract) | default(35) %}
+	{% set absolute_extrude = printer.gcode_move.absolute_extrude %}
+	
+	{% if printer.toolhead.extruder != '' %}
+	{% if printer[printer.toolhead.extruder].can_extrude %}
+	{% if use_fw_retract %}
+	{% if length < 0 %}
+	G10
+	{% else %}
+	G11
+	{% endif %}
+	{% else %}
+	M83
+	G1 E{length} F{(speed | float | abs) * 60}
+	{% if absolute_extrude %}
+	M82
+	{% endif %}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='{"\"%s\" not hot enough" % printer.toolhead.extruder}'
+	{% endif %}
+	{% endif %}
+
+[gcode_macro _CLIENT_RETRACT]
+description = Retracts, if the extruder is hot enough
+gcode = 
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set length = params.LENGTH | default(client.retract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_retract) | default(35) %}
+	
+	_CLIENT_EXTRUDE LENGTH=-{length | float | abs} SPEED={speed | float | abs}
+
+[mcu]
+serial = /dev/serial/by-id/<your-mcu-id>
+
+[printer]
+kinematics = none
+max_velocity = 1000
+max_accel = 1000
+=======================
+mcu 'mcu': Starting serial connect
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+webhooks client 547915723968: New connection
+webhooks client 547915723968: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+mcu 'mcu': Unable to open serial port: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+MCU error during connect
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 801, in _mcu_identify
+    self._serial.connect_uart(self._serialport, self._baud, rts)
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 182, in connect_uart
+    self._error("Unable to connect")
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 61, in _error
+    raise error(self.warn_prefix + (msg % params))
+serialhdl.error: mcu 'mcu': Unable to connect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 176, in _connect
+    self.send_event("klippy:mcu_identify")
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in send_event
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in <listcomp>
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 806, in _mcu_identify
+    raise error(str(e))
+mcu.error: mcu 'mcu': Unable to connect
+No build file /home/Ericmil8/klipper/klippy/../.config
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.dict
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.elf
+Attempting MCU 'mcu' reset
+Unhandled exception during post run
+Traceback (most recent call last):
+  File "/home/Ericmil8/klippy-env/lib/python3.9/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 234, in run
+    self.send_event("klippy:firmware_restart")
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in send_event
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in <listcomp>
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 948, in _firmware_restart
+    self._restart_arduino()
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 908, in _restart_arduino
+    serialhdl.arduino_reset(self._serialport, self._reactor)
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 379, in arduino_reset
+    ser = serial.Serial(serialport, 2400, timeout=0, exclusive=True)
+  File "/home/Ericmil8/klippy-env/lib/python3.9/site-packages/serial/serialutil.py", line 240, in __init__
+    self.open()
+  File "/home/Ericmil8/klippy-env/lib/python3.9/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/serial/by-id/<your-mcu-id>: [Errno 2] No such file or directory: '/dev/serial/by-id/<your-mcu-id>'
+Restarting printer
+Start printer at Sat Dec 16 23:39:33 2023 (1702791573.0 657.3)
+===== Config file =====
+[virtual_sdcard]
+path = ~/.octoprint/uploads/
+on_error_gcode = CANCEL_PRINT
+
+[pause_resume]
+recover_velocity = 50
+
+[display_status]
+
+[respond]
+
+[gcode_macro CANCEL_PRINT]
+description = Cancel the actual running print
+rename_existing = CANCEL_PRINT_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set allow_park = client.park_at_cancel | default(false) | lower == 'true' %}
+	{% set retract = client.cancel_retract | default(5.0) | abs %}
+	
+	{% set park_x = "" if (client.park_at_cancel_x | default(none) is none)
+	else "X=" ~ client.park_at_cancel_x %}
+	{% set park_y = "" if (client.park_at_cancel_y | default(none) is none)
+	else "Y=" ~ client.park_at_cancel_y %}
+	{% set custom_park = park_x | length > 0 or park_y | length > 0 %}
+	
+	
+	{% if printer['gcode_macro RESUME'].restore_idle_timeout > 0 %}
+	SET_IDLE_TIMEOUT TIMEOUT={printer['gcode_macro RESUME'].restore_idle_timeout}
+	{% endif %}
+	{% if (custom_park or not printer.pause_resume.is_paused) and allow_park %} _TOOLHEAD_PARK_PAUSE_CANCEL {park_x} {park_y} {% endif %}
+	_CLIENT_RETRACT LENGTH={retract}
+	TURN_OFF_HEATERS
+	M106 S0
+	{client.user_cancel_macro | default("")}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	SET_PAUSE_AT_LAYER ENABLE=0 LAYER=0
+	CANCEL_PRINT_BASE
+
+[gcode_macro PAUSE]
+description = Pause the actual running print
+rename_existing = PAUSE_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set idle_timeout = client.idle_timeout | default(0) %}
+	{% set temp = printer[printer.toolhead.extruder].target if printer.toolhead.extruder != '' else 0 %}
+	{% set restore = False if printer.toolhead.extruder == ''
+	else True  if params.RESTORE | default(1) | int == 1 else False %}
+	
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=last_extruder_temp VALUE="{{'restore': restore, 'temp': temp}}"
+	
+	{% if idle_timeout > 0 %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=restore_idle_timeout VALUE={printer.configfile.settings.idle_timeout.timeout}
+	SET_IDLE_TIMEOUT TIMEOUT={idle_timeout}
+	{% endif %}
+	PAUSE_BASE
+	{client.user_pause_macro | default("")}
+	_TOOLHEAD_PARK_PAUSE_CANCEL {rawparams}
+
+[gcode_macro RESUME]
+description = Resume the actual running print
+rename_existing = RESUME_BASE
+variable_last_extruder_temp = {'restore': False, 'temp': 0}
+variable_restore_idle_timeout = 0
+variable_idle_state = False
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set sp_move = client.speed_move | default(velocity) %}
+	{% set runout_resume = True if client.runout_sensor | default("") == ""
+	else True if not printer[client.runout_sensor].enabled
+	else printer[client.runout_sensor].filament_detected %}
+	{% set can_extrude = True if printer.toolhead.extruder == ''
+	else printer[printer.toolhead.extruder].can_extrude %}
+	{% set do_resume = False %}
+	
+	
+	{% if printer.idle_timeout.state | upper == "IDLE" or idle_state %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	{% if last_extruder_temp.restore %}
+	
+	RESPOND TYPE=echo MSG='{"Restoring \"%s\" temperature to %3.1f\u00B0C, this may take some time" % (printer.toolhead.extruder, last_extruder_temp.temp) }'
+	M109 S{last_extruder_temp.temp}
+	{% set do_resume = True %}
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	{% if runout_resume %}
+	{% if do_resume %}
+	{% if restore_idle_timeout > 0 %} SET_IDLE_TIMEOUT TIMEOUT={restore_idle_timeout} {% endif %}
+	{client.user_resume_macro | default("")}
+	_CLIENT_EXTRUDE
+	RESUME_BASE VELOCITY={params.VELOCITY | default(sp_move)}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" detects no filament, please load filament and press RESUME" % (client.runout_sensor.split(" "))[1]}'
+	{% endif %}
+
+[gcode_macro SET_PAUSE_NEXT_LAYER]
+description = Enable a pause if the next layer is reached
+gcode = 
+	{% set pause_next_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_next_layer %}
+	{% set ENABLE = params.ENABLE | default(1) | int != 0 %}
+	{% set MACRO = params.MACRO | default(pause_next_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_next_layer VALUE="{{ 'enable': ENABLE, 'call': MACRO }}"
+
+[gcode_macro SET_PAUSE_AT_LAYER]
+description = Enable/disable a pause if a given layer number is reached
+gcode = 
+	{% set pause_at_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_at_layer %}
+	{% set ENABLE = params.ENABLE | int != 0 if params.ENABLE is defined
+	else params.LAYER is defined %}
+	{% set LAYER = params.LAYER | default(pause_at_layer.layer) | int %}
+	{% set MACRO = params.MACRO | default(pause_at_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_at_layer VALUE="{{ 'enable': ENABLE, 'layer': LAYER, 'call': MACRO }}"
+
+[gcode_macro SET_PRINT_STATS_INFO]
+rename_existing = SET_PRINT_STATS_INFO_BASE
+description = Overwrite, to get pause_next_layer and pause_at_layer feature
+variable_pause_next_layer = { 'enable': False, 'call': "PAUSE" }
+variable_pause_at_layer = { 'enable': False, 'layer': 0, 'call': "PAUSE" }
+gcode = 
+	{% if pause_next_layer.enable %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_next_layer" % pause_next_layer.call}'
+	{pause_next_layer.call}
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	{% elif pause_at_layer.enable and params.CURRENT_LAYER is defined and params.CURRENT_LAYER | int == pause_at_layer.layer %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_at_layer [%d]" % (pause_at_layer.call, pause_at_layer.layer)}'
+	{pause_at_layer.call}
+	SET_PAUSE_AT_LAYER ENABLE=0
+	{% endif %}
+	SET_PRINT_STATS_INFO_BASE {rawparams}
+
+[gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL]
+description = Helper: park toolhead used in PAUSE and CANCEL_PRINT
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set use_custom     = client.use_custom_pos | default(false) | lower == 'true' %}
+	{% set custom_park_x  = client.custom_park_x | default(0.0) %}
+	{% set custom_park_y  = client.custom_park_y | default(0.0) %}
+	{% set park_dz        = client.custom_park_dz | default(2.0) | abs %}
+	{% set sp_hop         = client.speed_hop | default(15) * 60 %}
+	{% set sp_move        = client.speed_move | default(velocity) * 60 %}
+	
+	{% set origin    = printer.gcode_move.homing_origin %}
+	{% set act       = printer.gcode_move.gcode_position %}
+	{% set max       = printer.toolhead.axis_maximum %}
+	{% set cone      = printer.toolhead.cone_start_z | default(max.z) %}
+	{% set round_bed = True if printer.configfile.settings.printer.kinematics is in ['delta','polar','rotary_delta','winch']
+	else False %}
+	
+	{% set z_min = params.Z_MIN | default(0) | float %}
+	{% set z_park = [[(act.z + park_dz), z_min] | max, (max.z - origin.z)] | min %}
+	{% set x_park = params.X       if params.X is defined
+	else custom_park_x  if use_custom
+	else 0.0            if round_bed
+	else (max.x - 5.0) %}
+	{% set y_park = params.Y       if params.Y is defined
+	else custom_park_y  if use_custom
+	else (max.y - 5.0)  if round_bed and z_park < cone
+	else 0.0            if round_bed
+	else (max.y - 5.0) %}
+	
+	_CLIENT_RETRACT
+	{% if "xyz" in printer.toolhead.homed_axes %}
+	G90
+	G1 Z{z_park} F{sp_hop}
+	G1 X{x_park} Y{y_park} F{sp_move}
+	{% if not printer.gcode_move.absolute_coordinates %} G91 {% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='Printer not homed'
+	{% endif %}
+
+[gcode_macro _CLIENT_EXTRUDE]
+description = Extrudes, if the extruder is hot enough
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set use_fw_retract = (client.use_fw_retract | default(false) | lower == 'true') and (printer.firmware_retraction is defined) %}
+	{% set length = params.LENGTH | default(client.unretract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_unretract) | default(35) %}
+	{% set absolute_extrude = printer.gcode_move.absolute_extrude %}
+	
+	{% if printer.toolhead.extruder != '' %}
+	{% if printer[printer.toolhead.extruder].can_extrude %}
+	{% if use_fw_retract %}
+	{% if length < 0 %}
+	G10
+	{% else %}
+	G11
+	{% endif %}
+	{% else %}
+	M83
+	G1 E{length} F{(speed | float | abs) * 60}
+	{% if absolute_extrude %}
+	M82
+	{% endif %}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='{"\"%s\" not hot enough" % printer.toolhead.extruder}'
+	{% endif %}
+	{% endif %}
+
+[gcode_macro _CLIENT_RETRACT]
+description = Retracts, if the extruder is hot enough
+gcode = 
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set length = params.LENGTH | default(client.retract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_retract) | default(35) %}
+	
+	_CLIENT_EXTRUDE LENGTH=-{length | float | abs} SPEED={speed | float | abs}
+
+[printer]
+kinematics = cartesian
+max_z_velocity = 14
+max_z_accel = 100
+max_velocity = 200
+max_accel = 1800
+max_accel_to_decel = 1800
+square_corner_velocity = 1
+
+[input_shaper]
+shaper_freq_x = 25.0
+shaper_freq_y = 25.0
+shaper_type = mzv
+damping_ratio_x = 0.1
+damping_ratio_y = 0.1
+
+[firmware_retraction]
+retract_length = 0.4
+retract_speed = 80
+unretract_extra_length = .01
+unretract_speed = 80
+
+[idle_timeout]
+gcode = 
+	SET_HEATER_TEMPERATURE HEATER=extruder
+	SET_HEATER_TEMPERATURE HEATER=heater_bed
+	M18
+timeout = 1200
+
+[extruder]
+step_pin = PA4
+dir_pin = !PA6
+enable_pin = !PA2
+microsteps = 16
+full_steps_per_rotation = 200
+rotation_distance = 7.7201944
+nozzle_diameter = 0.400
+filament_diameter = 1.750
+heater_pin = PB4
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK5
+min_temp = 5
+max_temp = 275
+control = pid
+pid_kp = 21.703
+pid_ki = 1.104
+pid_kd = 106.614
+max_extrude_only_distance = 100.00
+pressure_advance = 0.2443
+
+[stepper_x]
+step_pin = PF0
+dir_pin = PF1
+enable_pin = !PD7
+microsteps = 16
+rotation_distance = 39.66941833
+endstop_pin = ^PE5
+position_endstop = -2.1
+position_max = 309
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -2.1
+
+[stepper_y]
+step_pin = PF6
+dir_pin = PF7
+enable_pin = !PF2
+microsteps = 16
+rotation_distance = 39.16
+endstop_pin = ^PJ1
+position_endstop = -0.5
+position_max = 319
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -0.5
+
+[stepper_z]
+step_pin = PL3
+dir_pin = !PL1
+enable_pin = !PK0
+microsteps = 16
+rotation_distance = 7.928
+endstop_pin = ^PD3
+position_endstop = 0.25
+position_min = -1
+position_max = 399
+homing_speed = 10
+second_homing_speed = 2.5
+
+[heater_bed]
+heater_pin = PH5
+sensor_type = ATC Semitec 104GT-2
+sensor_pin = PK6
+min_temp = 5
+max_temp = 130
+control = pid
+pid_kp = 74.976
+pid_ki = 1.754
+pid_kd = 801.310
+
+[bed_screws]
+screw1 = 32,35
+screw1_name = Front Left
+screw2 = 271,35
+screw2_name = Front Right
+screw3 = 271,271
+screw3_name = Back Right
+screw4 = 32,271
+screw4_name = Back Left
+horizontal_move_z = 5
+probe_height = 0.20
+speed = 50
+probe_speed = 5
+
+[output_pin Heater_Fan]
+pin = ! Rpi:gpio19
+value = 0
+shutdown_value = 0
+
+[heater_generic Chamber_Heater]
+heater_pin = Rpi:gpio21
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+max_power = 1.0
+min_temp = 0
+max_temp = 80
+control = pid
+pid_kp = 71.121
+pid_ki = 1.148
+pid_kd = 1101.484
+gcode_id = C
+
+[verify_heater Chamber_Heater]
+max_error = 480
+check_gain_time = 600
+hysteresis = 5
+heating_gain = 1
+
+[duplicate_pin_override]
+pins = PK7
+
+[temperature_fan  Chamber_Fan]
+pin = Rpi:gpio18
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+cycle_time = 0.01
+kick_start_time = 0.300
+off_below = 0.1
+gcode_id = F1
+control = watermark
+max_delta = 2.0
+min_temp = 0
+max_temp = 100
+target_temp = 90
+max_speed = 1.0
+min_speed = 0.3
+
+[adxl345]
+cs_pin = Rpi:None
+
+[resonance_tester]
+accel_chip = adxl345
+probe_points = 
+	150, 150, 20
+
+[gcode_macro M141]
+gcode = 
+	{% set CHAMBER_TEMP = params.S|default(21)|float %}
+	SET_PIN  PIN=Heater_Fan VALUE=1.0
+	SET_HEATER_TEMPERATURE HEATER=Chamber_Heater TARGET={CHAMBER_TEMP}
+	SET_TEMPERATURE_FAN_TARGET temperature_fan=Chamber_Fan target={CHAMBER_TEMP + 10} min_speed=.2 max_speed=.8
+
+[gcode_macro M900]
+gcode = 
+	M105
+
+[gcode_macro M300]
+gcode = 
+	
+	{% set S = params.S|default(1000)|int %}
+	
+	{% set P = params.P|default(100)|int %}
+	SET_PIN PIN=beeper VALUE=0.5 CYCLE_TIME={ 1.0/S if S > 0 else 1 }
+	G4 P{P}
+	SET_PIN PIN=beeper VALUE=0
+
+[gcode_macro START_PRINT]
+gcode = 
+	{% set BED_TEMP = params.BED_TEMP|default(60)|float %}
+	{% set EXTRUDER_TEMP = params.EXTRUDER_TEMP|default(190)|float %}
+	
+	M140 S{BED_TEMP}
+	
+	G90
+	
+	SET_GCODE_OFFSET Z=0.0
+	
+	G28
+	
+	G1 Z5 F3000
+	
+	G1 Z0.15 F300
+	
+	M190 S{BED_TEMP}
+	
+	M109 S{EXTRUDER_TEMP}
+
+[gcode_macro Tone1]
+gcode = 
+	M300 S200 P1000
+	M300 S500 P1000
+	M300 S1000 P1000
+	M300 S1500 P1000
+	M300 S400 P2000
+
+[output_pin Relay3]
+pin = ! Rpi:gpio16
+value = 0
+shutdown_value = 0
+
+[gcode_arcs]
+resolution = 0.1
+
+[fan]
+pin = PH6
+
+[mcu]
+serial = /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+baud = 250000
+
+[board_pins]
+aliases = 
+	
+	
+	EXP1_1=<5V>,    EXP1_3=PA7,    EXP1_5=PA3,	EXP1_7=PH1,	EXP1_9=PC2,
+	EXP1_2=<GND>,	EXP1_4=PA5,	EXP1_6=PA1,	EXP1_8=PH0,	EXP1_10=PC0,
+	
+	EXP2_1=<RST>,	EXP2_3=PG0,	EXP2_5=PB2,	EXP2_7=PB0,	EXP2_9=PB1,
+	EXP2_2=<GND>,	EXP2_4=PL0,	EXP2_6=PC4,	EXP2_8=PC6,	EXP2_10=PB3
+
+[display]
+lcd_type = st7920
+cs_pin = EXP1_7
+sclk_pin = EXP1_6
+sid_pin = EXP1_8
+encoder_pins = ^EXP2_6, ^EXP2_8
+click_pin = ^!EXP1_9
+
+[output_pin beeper]
+pin = EXP1_10
+pwm = True
+value = 0
+shutdown_value = 0
+cycle_time = 0.001
+
+[mcu Rpi]
+serial = /tmp/klipper_host_mcu
+
+[filament_switch_sensor fil_runout_sensor]
+pause_on_runout = True
+switch_pin = PE4
+
+[menu __main]
+type = list
+name = Main
+
+[menu __main __tune]
+type = list
+enable = {printer.idle_timeout.state == "Printing"}
+name = Tune
+
+[menu __main __tune __speed]
+type = input
+name = Speed: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.speed_factor}
+input_min = 0.01
+input_max = 5
+input_step = 0.01
+realtime = True
+gcode = 
+	M220 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __flow]
+type = input
+name = Flow: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.extrude_factor}
+input_min = 0.01
+input_max = 2
+input_step = 0.01
+realtime = True
+gcode = 
+	M221 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __offsetz]
+type = input
+name = Offset Z:{'%05.3f' % menu.input}
+input = {printer.gcode_move.homing_origin.z}
+input_min = -5
+input_max = 5
+input_step = 0.005
+realtime = True
+gcode = 
+	SET_GCODE_OFFSET Z={'%.3f' % menu.input} MOVE=1
+
+[menu __main __octoprint]
+type = list
+name = OctoPrint
+
+[menu __main __octoprint __pause]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Pause printing
+gcode = 
+	{action_respond_info('action:pause')}
+
+[menu __main __octoprint __resume]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Resume printing
+gcode = 
+	{action_respond_info('action:resume')}
+
+[menu __main __octoprint __abort]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Abort printing
+gcode = 
+	{action_respond_info('action:cancel')}
+
+[menu __main __sdcard]
+type = vsdlist
+enable = {('virtual_sdcard' in printer)}
+name = SD Card
+
+[menu __main __sdcard __start]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.virtual_sdcard.file_path and not printer.virtual_sdcard.is_active}
+name = Start printing
+gcode = M24
+
+[menu __main __sdcard __resume]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "paused"}
+name = Resume printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	RESUME
+	{% else %}
+	M24
+	{% endif %}
+
+[menu __main __sdcard __pause]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "printing"}
+name = Pause printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	PAUSE
+	{% else %}
+	M25
+	{% endif %}
+
+[menu __main __sdcard __cancel]
+type = command
+enable = {('virtual_sdcard' in printer) and (printer.print_stats.state == "printing" or printer.print_stats.state == "paused")}
+name = Cancel printing
+gcode = 
+	{% if 'pause_resume' in printer %}
+	CANCEL_PRINT
+	{% else %}
+	M25
+	M27
+	M26 S0
+	TURN_OFF_HEATERS
+	{% if printer.toolhead.position.z <= printer.toolhead.axis_maximum.z - 5 %}
+	G91
+	G0 Z5 F1000
+	G90
+	{% endif %}
+	{% endif %}
+
+[menu __main __control]
+type = list
+name = Control
+
+[menu __main __control __home]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home All
+gcode = G28
+
+[menu __main __control __homez]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home Z
+gcode = G28 Z
+
+[menu __main __control __homexy]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home X/Y
+gcode = G28 X Y
+
+[menu __main __control __disable]
+type = command
+name = Steppers off
+gcode = 
+	M84
+	M18
+
+[menu __main __control __fanonoff]
+type = input
+enable = {'fan' in printer}
+name = Fan: {'ON ' if menu.input else 'OFF'}
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	M106 S{255 if menu.input else 0}
+
+[menu __main __control __fanspeed]
+type = input
+enable = {'fan' in printer}
+name = Fan speed: {'%3d' % (menu.input*100)}%
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 0.01
+gcode = 
+	M106 S{'%d' % (menu.input*255)}
+
+[menu __main __control __caselightonoff]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'ON ' if menu.input else 'OFF'}
+input = {printer['output_pin caselight'].value}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	SET_PIN PIN=caselight VALUE={1 if menu.input else 0}
+
+[menu __main __control __caselightpwm]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'%3d' % (menu.input*100)}%
+input = {printer['output_pin caselight'].value}
+input_min = 0.0
+input_max = 1.0
+input_step = 0.01
+gcode = 
+	SET_PIN PIN=caselight VALUE={menu.input}
+
+[menu __main __control __move_10mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 10mm
+
+[menu __main __control __move_10mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 1mm
+
+[menu __main __control __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 0.1mm
+
+[menu __main __control __move_01mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __temp]
+type = list
+name = Temperature
+
+[menu __main __temp __hotend0_target]
+type = input
+enable = {('extruder' in printer) and ('extruder' in printer.heaters.available_heaters)}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotend1_target]
+type = input
+enable = {('extruder1' in printer) and ('extruder1' in printer.heaters.available_heaters)}
+name = {"Ex1:%3.0f (%4.0f)" % (menu.input, printer.extruder1.temperature)}
+input = {printer.extruder1.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder1.max_temp}
+input_step = 1
+gcode = M104 T1 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotbed_target]
+type = input
+enable = {'heater_bed' in printer}
+name = {"Bed:%3.0f (%4.0f)" % (menu.input, printer.heater_bed.temperature)}
+input = {printer.heater_bed.target}
+input_min = 0
+input_max = {printer.configfile.config.heater_bed.max_temp}
+input_step = 1
+gcode = M140 S{'%.0f' % menu.input}
+
+[menu __main __temp __preheat_pla]
+type = list
+name = Preheat PLA
+
+[menu __main __temp __preheat_pla __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S60
+	M104 S200
+
+[menu __main __temp __preheat_pla __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S200
+
+[menu __main __temp __preheat_pla __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S60
+
+[menu __main __temp __preheat_abs]
+type = list
+name = Preheat ABS
+
+[menu __main __temp __preheat_abs __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S110
+	M104 S245
+
+[menu __main __temp __preheat_abs __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S245
+
+[menu __main __temp __preheat_abs __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S110
+
+[menu __main __temp __cooldown]
+type = list
+name = Cooldown
+
+[menu __main __temp __cooldown __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Cooldown all
+gcode = 
+	M104 S0
+	M140 S0
+
+[menu __main __temp __cooldown __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Cooldown hotend
+gcode = M104 S0
+
+[menu __main __temp __cooldown __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Cooldown hotbed
+gcode = M140 S0
+
+[menu __main __filament]
+type = list
+name = Filament
+
+[menu __main __filament __hotend0_target]
+type = input
+enable = {'extruder' in printer}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __filament __loadf]
+type = command
+name = Load Fil. fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __loads]
+type = command
+name = Load Fil. slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloadf]
+type = command
+name = Unload Fil.fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloads]
+type = command
+name = Unload Fil.slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __feed]
+type = input
+name = Feed: {'%.1f' % menu.input}
+input = 5
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E{'%.1f' % menu.input} F60
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __setup]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Setup
+
+[menu __main __setup __save_config]
+type = command
+name = Save config
+gcode = SAVE_CONFIG
+
+[menu __main __setup __restart]
+type = list
+name = Restart
+
+[menu __main __setup __restart __host_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart host
+gcode = RESTART
+
+[menu __main __setup __restart __firmware_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart FW
+gcode = FIRMWARE_RESTART
+
+[menu __main __setup __tuning]
+type = list
+name = PID tuning
+
+[menu __main __setup __tuning __hotend_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('extruder' in printer)}
+name = Tune Hotend PID
+gcode = PID_CALIBRATE HEATER=extruder TARGET=210 WRITE_FILE=1
+
+[menu __main __setup __tuning __hotbed_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('heater_bed' in printer)}
+name = Tune Hotbed PID
+gcode = PID_CALIBRATE HEATER=heater_bed TARGET=60 WRITE_FILE=1
+
+[menu __main __setup __calib]
+type = list
+name = Calibration
+
+[menu __main __setup __calib __adjust_bed_screw]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Tram Bed
+index = 0
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramABS]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start ABS
+gcode = 
+	G28
+	G0 F1500
+	M104 S200
+	M140 S100
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramPLA]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start PLA
+gcode = 
+	G28
+	G0 F1500
+	M104 S180
+	M140 S60
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _adjusted_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Next
+gcode = 
+	ADJUSTED
+
+[menu __main __setup __calib __adjust_bed_screw _accept_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Accept Next
+gcode = 
+	ACCEPT
+
+[menu __main __setup __calib __adjust_bed_screw _abort_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Cancel
+gcode = 
+	ABORT
+
+[menu __main __setup __calib __adjust_bed_screw __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu ___main __setup __calib __adjust_bed_screw __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __setup __calib __delta_calib_auto]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. auto
+gcode = 
+	G28
+	DELTA_CALIBRATE
+
+[menu __main __setup __calib __delta_calib_man]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. man
+
+[menu __main __setup __calib __bedprobe]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Bed probe
+gcode = PROBE
+
+[menu __main __setup __calib __delta_calib_man __start]
+type = command
+name = Start probing
+gcode = 
+	G28
+	DELTA_CALIBRATE METHOD=manual
+
+[menu __main __setup __calib __delta_calib_man __move_z]
+type = input
+name = Move Z: {'%03.2f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_step = 1
+realtime = True
+gcode = 
+	{%- if menu.event == 'change' -%}
+	G1 Z{'%.2f' % menu.input}
+	{%- elif menu.event == 'long_click' -%}
+	G1 Z{'%.2f' % menu.input}
+	SAVE_GCODE_STATE NAME=__move__axis
+	G91
+	G1 Z2
+	G1 Z-2
+	RESTORE_GCODE_STATE NAME=__move__axis
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __test_z]
+type = input
+name = Test Z: {['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+input = 6
+input_min = 0
+input_max = 11
+input_step = 1
+gcode = 
+	{%- if menu.event == 'long_click' -%}
+	TESTZ Z={['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __accept]
+type = command
+name = Accept
+gcode = ACCEPT
+
+[menu __main __setup __calib __delta_calib_man __abort]
+type = command
+name = Abort
+gcode = ABORT
+
+[menu __main __setup __dump]
+type = command
+name = Dump parameters
+gcode = 
+	{% for name1 in printer %}
+	{% for name2 in printer[name1] %}
+	{ action_respond_info("printer['%s'].%s = %s"
+	% (name1, name2, printer[name1][name2])) }
+	{% else %}
+	{ action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
+	{% endfor %}
+	{% endfor %}
+=======================
+Declaration of '__main' hides previous menuitem declaration
+Declaration of '__main __tune' hides previous menuitem declaration
+Declaration of '__main __tune __speed' hides previous menuitem declaration
+Declaration of '__main __tune __flow' hides previous menuitem declaration
+Declaration of '__main __tune __offsetz' hides previous menuitem declaration
+Declaration of '__main __octoprint' hides previous menuitem declaration
+Declaration of '__main __octoprint __pause' hides previous menuitem declaration
+Declaration of '__main __octoprint __resume' hides previous menuitem declaration
+Declaration of '__main __octoprint __abort' hides previous menuitem declaration
+Declaration of '__main __sdcard' hides previous menuitem declaration
+Declaration of '__main __sdcard __start' hides previous menuitem declaration
+Declaration of '__main __sdcard __resume' hides previous menuitem declaration
+Declaration of '__main __sdcard __pause' hides previous menuitem declaration
+Declaration of '__main __sdcard __cancel' hides previous menuitem declaration
+Declaration of '__main __control' hides previous menuitem declaration
+Declaration of '__main __control __home' hides previous menuitem declaration
+Declaration of '__main __control __homez' hides previous menuitem declaration
+Declaration of '__main __control __homexy' hides previous menuitem declaration
+Declaration of '__main __control __disable' hides previous menuitem declaration
+Declaration of '__main __control __fanonoff' hides previous menuitem declaration
+Declaration of '__main __control __fanspeed' hides previous menuitem declaration
+Declaration of '__main __control __caselightonoff' hides previous menuitem declaration
+Declaration of '__main __control __caselightpwm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __temp' hides previous menuitem declaration
+Declaration of '__main __temp __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotend1_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotbed_target' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __all' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotbed' hides previous menuitem declaration
+Declaration of '__main __filament' hides previous menuitem declaration
+Declaration of '__main __filament __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __filament __loadf' hides previous menuitem declaration
+Declaration of '__main __filament __loads' hides previous menuitem declaration
+Declaration of '__main __filament __unloadf' hides previous menuitem declaration
+Declaration of '__main __filament __unloads' hides previous menuitem declaration
+Declaration of '__main __filament __feed' hides previous menuitem declaration
+Declaration of '__main __setup' hides previous menuitem declaration
+Declaration of '__main __setup __save_config' hides previous menuitem declaration
+Declaration of '__main __setup __restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __host_restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __firmware_restart' hides previous menuitem declaration
+Declaration of '__main __setup __tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotend_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotbed_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __calib' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_auto' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man' hides previous menuitem declaration
+Declaration of '__main __setup __calib __bedprobe' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __start' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __move_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __test_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __accept' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __abort' hides previous menuitem declaration
+Declaration of '__main __setup __dump' hides previous menuitem declaration
+Extruder max_extrude_ratio=0.266081
+mcu 'mcu': Starting serial connect
+webhooks client 547911033088: New connection
+webhooks client 547911033088: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+Loaded MCU 'mcu' 94 commands (v0.10.0-286-gfe2974b8 / gcc: (GCC) 5.4.0 binutils: (GNU Binutils) 2.26.20160125)
+MCU 'mcu' config: ADC_MAX=1023 BUS_PINS_spi=PB3,PB2,PB1 BUS_PINS_twi=PD0,PD1 CLOCK_FREQ=16000000 MCU=atmega2560 PWM_MAX=255 RECEIVE_WINDOW=192 RESERVE_PINS_serial=PE0,PE1 SERIAL_BAUD=250000 STATS_SUMSQ_BASE=256
+mcu 'Rpi': Starting connect
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+MCU error during connect
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 803, in _mcu_identify
+    self._serial.connect_pipe(self._serialport)
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 165, in connect_pipe
+    self._error("Unable to connect")
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 61, in _error
+    raise error(self.warn_prefix + (msg % params))
+serialhdl.error: mcu 'Rpi': Unable to connect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 176, in _connect
+    self.send_event("klippy:mcu_identify")
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in send_event
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in <listcomp>
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 806, in _mcu_identify
+    raise error(str(e))
+mcu.error: mcu 'Rpi': Unable to connect
+No build file /home/Ericmil8/klipper/klippy/../.config
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.dict
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.elf
+Attempting MCU 'mcu' reset
+Unable to issue reset command on MCU 'Rpi'
+webhooks client 547911033088: Disconnected
+Restarting printer
+Start printer at Sat Dec 16 23:46:40 2023 (1702792000.5 1084.8)
+===== Config file =====
+[virtual_sdcard]
+path = ~/.octoprint/uploads/
+on_error_gcode = CANCEL_PRINT
+
+[pause_resume]
+recover_velocity = 50
+
+[display_status]
+
+[respond]
+
+[gcode_macro CANCEL_PRINT]
+description = Cancel the actual running print
+rename_existing = CANCEL_PRINT_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set allow_park = client.park_at_cancel | default(false) | lower == 'true' %}
+	{% set retract = client.cancel_retract | default(5.0) | abs %}
+	
+	{% set park_x = "" if (client.park_at_cancel_x | default(none) is none)
+	else "X=" ~ client.park_at_cancel_x %}
+	{% set park_y = "" if (client.park_at_cancel_y | default(none) is none)
+	else "Y=" ~ client.park_at_cancel_y %}
+	{% set custom_park = park_x | length > 0 or park_y | length > 0 %}
+	
+	
+	{% if printer['gcode_macro RESUME'].restore_idle_timeout > 0 %}
+	SET_IDLE_TIMEOUT TIMEOUT={printer['gcode_macro RESUME'].restore_idle_timeout}
+	{% endif %}
+	{% if (custom_park or not printer.pause_resume.is_paused) and allow_park %} _TOOLHEAD_PARK_PAUSE_CANCEL {park_x} {park_y} {% endif %}
+	_CLIENT_RETRACT LENGTH={retract}
+	TURN_OFF_HEATERS
+	M106 S0
+	{client.user_cancel_macro | default("")}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	SET_PAUSE_AT_LAYER ENABLE=0 LAYER=0
+	CANCEL_PRINT_BASE
+
+[gcode_macro PAUSE]
+description = Pause the actual running print
+rename_existing = PAUSE_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set idle_timeout = client.idle_timeout | default(0) %}
+	{% set temp = printer[printer.toolhead.extruder].target if printer.toolhead.extruder != '' else 0 %}
+	{% set restore = False if printer.toolhead.extruder == ''
+	else True  if params.RESTORE | default(1) | int == 1 else False %}
+	
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=last_extruder_temp VALUE="{{'restore': restore, 'temp': temp}}"
+	
+	{% if idle_timeout > 0 %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=restore_idle_timeout VALUE={printer.configfile.settings.idle_timeout.timeout}
+	SET_IDLE_TIMEOUT TIMEOUT={idle_timeout}
+	{% endif %}
+	PAUSE_BASE
+	{client.user_pause_macro | default("")}
+	_TOOLHEAD_PARK_PAUSE_CANCEL {rawparams}
+
+[gcode_macro RESUME]
+description = Resume the actual running print
+rename_existing = RESUME_BASE
+variable_last_extruder_temp = {'restore': False, 'temp': 0}
+variable_restore_idle_timeout = 0
+variable_idle_state = False
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set sp_move = client.speed_move | default(velocity) %}
+	{% set runout_resume = True if client.runout_sensor | default("") == ""
+	else True if not printer[client.runout_sensor].enabled
+	else printer[client.runout_sensor].filament_detected %}
+	{% set can_extrude = True if printer.toolhead.extruder == ''
+	else printer[printer.toolhead.extruder].can_extrude %}
+	{% set do_resume = False %}
+	
+	
+	{% if printer.idle_timeout.state | upper == "IDLE" or idle_state %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	{% if last_extruder_temp.restore %}
+	
+	RESPOND TYPE=echo MSG='{"Restoring \"%s\" temperature to %3.1f\u00B0C, this may take some time" % (printer.toolhead.extruder, last_extruder_temp.temp) }'
+	M109 S{last_extruder_temp.temp}
+	{% set do_resume = True %}
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	{% if runout_resume %}
+	{% if do_resume %}
+	{% if restore_idle_timeout > 0 %} SET_IDLE_TIMEOUT TIMEOUT={restore_idle_timeout} {% endif %}
+	{client.user_resume_macro | default("")}
+	_CLIENT_EXTRUDE
+	RESUME_BASE VELOCITY={params.VELOCITY | default(sp_move)}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" detects no filament, please load filament and press RESUME" % (client.runout_sensor.split(" "))[1]}'
+	{% endif %}
+
+[gcode_macro SET_PAUSE_NEXT_LAYER]
+description = Enable a pause if the next layer is reached
+gcode = 
+	{% set pause_next_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_next_layer %}
+	{% set ENABLE = params.ENABLE | default(1) | int != 0 %}
+	{% set MACRO = params.MACRO | default(pause_next_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_next_layer VALUE="{{ 'enable': ENABLE, 'call': MACRO }}"
+
+[gcode_macro SET_PAUSE_AT_LAYER]
+description = Enable/disable a pause if a given layer number is reached
+gcode = 
+	{% set pause_at_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_at_layer %}
+	{% set ENABLE = params.ENABLE | int != 0 if params.ENABLE is defined
+	else params.LAYER is defined %}
+	{% set LAYER = params.LAYER | default(pause_at_layer.layer) | int %}
+	{% set MACRO = params.MACRO | default(pause_at_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_at_layer VALUE="{{ 'enable': ENABLE, 'layer': LAYER, 'call': MACRO }}"
+
+[gcode_macro SET_PRINT_STATS_INFO]
+rename_existing = SET_PRINT_STATS_INFO_BASE
+description = Overwrite, to get pause_next_layer and pause_at_layer feature
+variable_pause_next_layer = { 'enable': False, 'call': "PAUSE" }
+variable_pause_at_layer = { 'enable': False, 'layer': 0, 'call': "PAUSE" }
+gcode = 
+	{% if pause_next_layer.enable %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_next_layer" % pause_next_layer.call}'
+	{pause_next_layer.call}
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	{% elif pause_at_layer.enable and params.CURRENT_LAYER is defined and params.CURRENT_LAYER | int == pause_at_layer.layer %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_at_layer [%d]" % (pause_at_layer.call, pause_at_layer.layer)}'
+	{pause_at_layer.call}
+	SET_PAUSE_AT_LAYER ENABLE=0
+	{% endif %}
+	SET_PRINT_STATS_INFO_BASE {rawparams}
+
+[gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL]
+description = Helper: park toolhead used in PAUSE and CANCEL_PRINT
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set use_custom     = client.use_custom_pos | default(false) | lower == 'true' %}
+	{% set custom_park_x  = client.custom_park_x | default(0.0) %}
+	{% set custom_park_y  = client.custom_park_y | default(0.0) %}
+	{% set park_dz        = client.custom_park_dz | default(2.0) | abs %}
+	{% set sp_hop         = client.speed_hop | default(15) * 60 %}
+	{% set sp_move        = client.speed_move | default(velocity) * 60 %}
+	
+	{% set origin    = printer.gcode_move.homing_origin %}
+	{% set act       = printer.gcode_move.gcode_position %}
+	{% set max       = printer.toolhead.axis_maximum %}
+	{% set cone      = printer.toolhead.cone_start_z | default(max.z) %}
+	{% set round_bed = True if printer.configfile.settings.printer.kinematics is in ['delta','polar','rotary_delta','winch']
+	else False %}
+	
+	{% set z_min = params.Z_MIN | default(0) | float %}
+	{% set z_park = [[(act.z + park_dz), z_min] | max, (max.z - origin.z)] | min %}
+	{% set x_park = params.X       if params.X is defined
+	else custom_park_x  if use_custom
+	else 0.0            if round_bed
+	else (max.x - 5.0) %}
+	{% set y_park = params.Y       if params.Y is defined
+	else custom_park_y  if use_custom
+	else (max.y - 5.0)  if round_bed and z_park < cone
+	else 0.0            if round_bed
+	else (max.y - 5.0) %}
+	
+	_CLIENT_RETRACT
+	{% if "xyz" in printer.toolhead.homed_axes %}
+	G90
+	G1 Z{z_park} F{sp_hop}
+	G1 X{x_park} Y{y_park} F{sp_move}
+	{% if not printer.gcode_move.absolute_coordinates %} G91 {% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='Printer not homed'
+	{% endif %}
+
+[gcode_macro _CLIENT_EXTRUDE]
+description = Extrudes, if the extruder is hot enough
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set use_fw_retract = (client.use_fw_retract | default(false) | lower == 'true') and (printer.firmware_retraction is defined) %}
+	{% set length = params.LENGTH | default(client.unretract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_unretract) | default(35) %}
+	{% set absolute_extrude = printer.gcode_move.absolute_extrude %}
+	
+	{% if printer.toolhead.extruder != '' %}
+	{% if printer[printer.toolhead.extruder].can_extrude %}
+	{% if use_fw_retract %}
+	{% if length < 0 %}
+	G10
+	{% else %}
+	G11
+	{% endif %}
+	{% else %}
+	M83
+	G1 E{length} F{(speed | float | abs) * 60}
+	{% if absolute_extrude %}
+	M82
+	{% endif %}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='{"\"%s\" not hot enough" % printer.toolhead.extruder}'
+	{% endif %}
+	{% endif %}
+
+[gcode_macro _CLIENT_RETRACT]
+description = Retracts, if the extruder is hot enough
+gcode = 
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set length = params.LENGTH | default(client.retract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_retract) | default(35) %}
+	
+	_CLIENT_EXTRUDE LENGTH=-{length | float | abs} SPEED={speed | float | abs}
+
+[printer]
+kinematics = cartesian
+max_z_velocity = 14
+max_z_accel = 100
+max_velocity = 200
+max_accel = 1800
+max_accel_to_decel = 1800
+square_corner_velocity = 1
+
+[input_shaper]
+shaper_freq_x = 25.0
+shaper_freq_y = 25.0
+shaper_type = mzv
+damping_ratio_x = 0.1
+damping_ratio_y = 0.1
+
+[firmware_retraction]
+retract_length = 0.4
+retract_speed = 80
+unretract_extra_length = .01
+unretract_speed = 80
+
+[idle_timeout]
+gcode = 
+	SET_HEATER_TEMPERATURE HEATER=extruder
+	SET_HEATER_TEMPERATURE HEATER=heater_bed
+	M18
+timeout = 1200
+
+[extruder]
+step_pin = PA4
+dir_pin = !PA6
+enable_pin = !PA2
+microsteps = 16
+full_steps_per_rotation = 200
+rotation_distance = 7.7201944
+nozzle_diameter = 0.400
+filament_diameter = 1.750
+heater_pin = PB4
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK5
+min_temp = 5
+max_temp = 275
+control = pid
+pid_kp = 21.703
+pid_ki = 1.104
+pid_kd = 106.614
+max_extrude_only_distance = 100.00
+pressure_advance = 0.2443
+
+[stepper_x]
+step_pin = PF0
+dir_pin = PF1
+enable_pin = !PD7
+microsteps = 16
+rotation_distance = 39.66941833
+endstop_pin = ^PE5
+position_endstop = -2.1
+position_max = 309
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -2.1
+
+[stepper_y]
+step_pin = PF6
+dir_pin = PF7
+enable_pin = !PF2
+microsteps = 16
+rotation_distance = 39.16
+endstop_pin = ^PJ1
+position_endstop = -0.5
+position_max = 319
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -0.5
+
+[stepper_z]
+step_pin = PL3
+dir_pin = !PL1
+enable_pin = !PK0
+microsteps = 16
+rotation_distance = 7.928
+endstop_pin = ^PD3
+position_endstop = 0.25
+position_min = -1
+position_max = 399
+homing_speed = 10
+second_homing_speed = 2.5
+
+[heater_bed]
+heater_pin = PH5
+sensor_type = ATC Semitec 104GT-2
+sensor_pin = PK6
+min_temp = 5
+max_temp = 130
+control = pid
+pid_kp = 74.976
+pid_ki = 1.754
+pid_kd = 801.310
+
+[bed_screws]
+screw1 = 32,35
+screw1_name = Front Left
+screw2 = 271,35
+screw2_name = Front Right
+screw3 = 271,271
+screw3_name = Back Right
+screw4 = 32,271
+screw4_name = Back Left
+horizontal_move_z = 5
+probe_height = 0.20
+speed = 50
+probe_speed = 5
+
+[output_pin Heater_Fan]
+pin = ! Rpi:gpio19
+value = 0
+shutdown_value = 0
+
+[heater_generic Chamber_Heater]
+heater_pin = Rpi:gpio21
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+max_power = 1.0
+min_temp = 0
+max_temp = 80
+control = pid
+pid_kp = 71.121
+pid_ki = 1.148
+pid_kd = 1101.484
+gcode_id = C
+
+[verify_heater Chamber_Heater]
+max_error = 480
+check_gain_time = 600
+hysteresis = 5
+heating_gain = 1
+
+[duplicate_pin_override]
+pins = PK7
+
+[temperature_fan  Chamber_Fan]
+pin = Rpi:gpio18
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+cycle_time = 0.01
+kick_start_time = 0.300
+off_below = 0.1
+gcode_id = F1
+control = watermark
+max_delta = 2.0
+min_temp = 0
+max_temp = 100
+target_temp = 90
+max_speed = 1.0
+min_speed = 0.3
+
+[adxl345]
+cs_pin = Rpi:None
+
+[resonance_tester]
+accel_chip = adxl345
+probe_points = 
+	150, 150, 20
+
+[gcode_macro M141]
+gcode = 
+	{% set CHAMBER_TEMP = params.S|default(21)|float %}
+	SET_PIN  PIN=Heater_Fan VALUE=1.0
+	SET_HEATER_TEMPERATURE HEATER=Chamber_Heater TARGET={CHAMBER_TEMP}
+	SET_TEMPERATURE_FAN_TARGET temperature_fan=Chamber_Fan target={CHAMBER_TEMP + 10} min_speed=.2 max_speed=.8
+
+[gcode_macro M900]
+gcode = 
+	M105
+
+[gcode_macro M300]
+gcode = 
+	
+	{% set S = params.S|default(1000)|int %}
+	
+	{% set P = params.P|default(100)|int %}
+	SET_PIN PIN=beeper VALUE=0.5 CYCLE_TIME={ 1.0/S if S > 0 else 1 }
+	G4 P{P}
+	SET_PIN PIN=beeper VALUE=0
+
+[gcode_macro START_PRINT]
+gcode = 
+	{% set BED_TEMP = params.BED_TEMP|default(60)|float %}
+	{% set EXTRUDER_TEMP = params.EXTRUDER_TEMP|default(190)|float %}
+	
+	M140 S{BED_TEMP}
+	
+	G90
+	
+	SET_GCODE_OFFSET Z=0.0
+	
+	G28
+	
+	G1 Z5 F3000
+	
+	G1 Z0.15 F300
+	
+	M190 S{BED_TEMP}
+	
+	M109 S{EXTRUDER_TEMP}
+
+[gcode_macro Tone1]
+gcode = 
+	M300 S200 P1000
+	M300 S500 P1000
+	M300 S1000 P1000
+	M300 S1500 P1000
+	M300 S400 P2000
+
+[output_pin Relay3]
+pin = ! Rpi:gpio16
+value = 0
+shutdown_value = 0
+
+[gcode_arcs]
+resolution = 0.1
+
+[fan]
+pin = PH6
+
+[mcu]
+serial = /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+baud = 250000
+
+[board_pins]
+aliases = 
+	
+	
+	EXP1_1=<5V>,    EXP1_3=PA7,    EXP1_5=PA3,	EXP1_7=PH1,	EXP1_9=PC2,
+	EXP1_2=<GND>,	EXP1_4=PA5,	EXP1_6=PA1,	EXP1_8=PH0,	EXP1_10=PC0,
+	
+	EXP2_1=<RST>,	EXP2_3=PG0,	EXP2_5=PB2,	EXP2_7=PB0,	EXP2_9=PB1,
+	EXP2_2=<GND>,	EXP2_4=PL0,	EXP2_6=PC4,	EXP2_8=PC6,	EXP2_10=PB3
+
+[display]
+lcd_type = st7920
+cs_pin = EXP1_7
+sclk_pin = EXP1_6
+sid_pin = EXP1_8
+encoder_pins = ^EXP2_6, ^EXP2_8
+click_pin = ^!EXP1_9
+
+[output_pin beeper]
+pin = EXP1_10
+pwm = True
+value = 0
+shutdown_value = 0
+cycle_time = 0.001
+
+[mcu Rpi]
+serial = /tmp/klipper_host_mcu
+
+[filament_switch_sensor fil_runout_sensor]
+pause_on_runout = True
+switch_pin = PE4
+
+[menu __main]
+type = list
+name = Main
+
+[menu __main __tune]
+type = list
+enable = {printer.idle_timeout.state == "Printing"}
+name = Tune
+
+[menu __main __tune __speed]
+type = input
+name = Speed: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.speed_factor}
+input_min = 0.01
+input_max = 5
+input_step = 0.01
+realtime = True
+gcode = 
+	M220 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __flow]
+type = input
+name = Flow: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.extrude_factor}
+input_min = 0.01
+input_max = 2
+input_step = 0.01
+realtime = True
+gcode = 
+	M221 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __offsetz]
+type = input
+name = Offset Z:{'%05.3f' % menu.input}
+input = {printer.gcode_move.homing_origin.z}
+input_min = -5
+input_max = 5
+input_step = 0.005
+realtime = True
+gcode = 
+	SET_GCODE_OFFSET Z={'%.3f' % menu.input} MOVE=1
+
+[menu __main __octoprint]
+type = list
+name = OctoPrint
+
+[menu __main __octoprint __pause]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Pause printing
+gcode = 
+	{action_respond_info('action:pause')}
+
+[menu __main __octoprint __resume]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Resume printing
+gcode = 
+	{action_respond_info('action:resume')}
+
+[menu __main __octoprint __abort]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Abort printing
+gcode = 
+	{action_respond_info('action:cancel')}
+
+[menu __main __sdcard]
+type = vsdlist
+enable = {('virtual_sdcard' in printer)}
+name = SD Card
+
+[menu __main __sdcard __start]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.virtual_sdcard.file_path and not printer.virtual_sdcard.is_active}
+name = Start printing
+gcode = M24
+
+[menu __main __sdcard __resume]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "paused"}
+name = Resume printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	RESUME
+	{% else %}
+	M24
+	{% endif %}
+
+[menu __main __sdcard __pause]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "printing"}
+name = Pause printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	PAUSE
+	{% else %}
+	M25
+	{% endif %}
+
+[menu __main __sdcard __cancel]
+type = command
+enable = {('virtual_sdcard' in printer) and (printer.print_stats.state == "printing" or printer.print_stats.state == "paused")}
+name = Cancel printing
+gcode = 
+	{% if 'pause_resume' in printer %}
+	CANCEL_PRINT
+	{% else %}
+	M25
+	M27
+	M26 S0
+	TURN_OFF_HEATERS
+	{% if printer.toolhead.position.z <= printer.toolhead.axis_maximum.z - 5 %}
+	G91
+	G0 Z5 F1000
+	G90
+	{% endif %}
+	{% endif %}
+
+[menu __main __control]
+type = list
+name = Control
+
+[menu __main __control __home]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home All
+gcode = G28
+
+[menu __main __control __homez]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home Z
+gcode = G28 Z
+
+[menu __main __control __homexy]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home X/Y
+gcode = G28 X Y
+
+[menu __main __control __disable]
+type = command
+name = Steppers off
+gcode = 
+	M84
+	M18
+
+[menu __main __control __fanonoff]
+type = input
+enable = {'fan' in printer}
+name = Fan: {'ON ' if menu.input else 'OFF'}
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	M106 S{255 if menu.input else 0}
+
+[menu __main __control __fanspeed]
+type = input
+enable = {'fan' in printer}
+name = Fan speed: {'%3d' % (menu.input*100)}%
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 0.01
+gcode = 
+	M106 S{'%d' % (menu.input*255)}
+
+[menu __main __control __caselightonoff]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'ON ' if menu.input else 'OFF'}
+input = {printer['output_pin caselight'].value}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	SET_PIN PIN=caselight VALUE={1 if menu.input else 0}
+
+[menu __main __control __caselightpwm]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'%3d' % (menu.input*100)}%
+input = {printer['output_pin caselight'].value}
+input_min = 0.0
+input_max = 1.0
+input_step = 0.01
+gcode = 
+	SET_PIN PIN=caselight VALUE={menu.input}
+
+[menu __main __control __move_10mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 10mm
+
+[menu __main __control __move_10mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 1mm
+
+[menu __main __control __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 0.1mm
+
+[menu __main __control __move_01mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __temp]
+type = list
+name = Temperature
+
+[menu __main __temp __hotend0_target]
+type = input
+enable = {('extruder' in printer) and ('extruder' in printer.heaters.available_heaters)}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotend1_target]
+type = input
+enable = {('extruder1' in printer) and ('extruder1' in printer.heaters.available_heaters)}
+name = {"Ex1:%3.0f (%4.0f)" % (menu.input, printer.extruder1.temperature)}
+input = {printer.extruder1.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder1.max_temp}
+input_step = 1
+gcode = M104 T1 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotbed_target]
+type = input
+enable = {'heater_bed' in printer}
+name = {"Bed:%3.0f (%4.0f)" % (menu.input, printer.heater_bed.temperature)}
+input = {printer.heater_bed.target}
+input_min = 0
+input_max = {printer.configfile.config.heater_bed.max_temp}
+input_step = 1
+gcode = M140 S{'%.0f' % menu.input}
+
+[menu __main __temp __preheat_pla]
+type = list
+name = Preheat PLA
+
+[menu __main __temp __preheat_pla __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S60
+	M104 S200
+
+[menu __main __temp __preheat_pla __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S200
+
+[menu __main __temp __preheat_pla __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S60
+
+[menu __main __temp __preheat_abs]
+type = list
+name = Preheat ABS
+
+[menu __main __temp __preheat_abs __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S110
+	M104 S245
+
+[menu __main __temp __preheat_abs __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S245
+
+[menu __main __temp __preheat_abs __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S110
+
+[menu __main __temp __cooldown]
+type = list
+name = Cooldown
+
+[menu __main __temp __cooldown __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Cooldown all
+gcode = 
+	M104 S0
+	M140 S0
+
+[menu __main __temp __cooldown __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Cooldown hotend
+gcode = M104 S0
+
+[menu __main __temp __cooldown __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Cooldown hotbed
+gcode = M140 S0
+
+[menu __main __filament]
+type = list
+name = Filament
+
+[menu __main __filament __hotend0_target]
+type = input
+enable = {'extruder' in printer}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __filament __loadf]
+type = command
+name = Load Fil. fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __loads]
+type = command
+name = Load Fil. slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloadf]
+type = command
+name = Unload Fil.fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloads]
+type = command
+name = Unload Fil.slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __feed]
+type = input
+name = Feed: {'%.1f' % menu.input}
+input = 5
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E{'%.1f' % menu.input} F60
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __setup]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Setup
+
+[menu __main __setup __save_config]
+type = command
+name = Save config
+gcode = SAVE_CONFIG
+
+[menu __main __setup __restart]
+type = list
+name = Restart
+
+[menu __main __setup __restart __host_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart host
+gcode = RESTART
+
+[menu __main __setup __restart __firmware_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart FW
+gcode = FIRMWARE_RESTART
+
+[menu __main __setup __tuning]
+type = list
+name = PID tuning
+
+[menu __main __setup __tuning __hotend_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('extruder' in printer)}
+name = Tune Hotend PID
+gcode = PID_CALIBRATE HEATER=extruder TARGET=210 WRITE_FILE=1
+
+[menu __main __setup __tuning __hotbed_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('heater_bed' in printer)}
+name = Tune Hotbed PID
+gcode = PID_CALIBRATE HEATER=heater_bed TARGET=60 WRITE_FILE=1
+
+[menu __main __setup __calib]
+type = list
+name = Calibration
+
+[menu __main __setup __calib __adjust_bed_screw]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Tram Bed
+index = 0
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramABS]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start ABS
+gcode = 
+	G28
+	G0 F1500
+	M104 S200
+	M140 S100
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramPLA]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start PLA
+gcode = 
+	G28
+	G0 F1500
+	M104 S180
+	M140 S60
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _adjusted_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Next
+gcode = 
+	ADJUSTED
+
+[menu __main __setup __calib __adjust_bed_screw _accept_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Accept Next
+gcode = 
+	ACCEPT
+
+[menu __main __setup __calib __adjust_bed_screw _abort_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Cancel
+gcode = 
+	ABORT
+
+[menu __main __setup __calib __adjust_bed_screw __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu ___main __setup __calib __adjust_bed_screw __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __setup __calib __delta_calib_auto]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. auto
+gcode = 
+	G28
+	DELTA_CALIBRATE
+
+[menu __main __setup __calib __delta_calib_man]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. man
+
+[menu __main __setup __calib __bedprobe]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Bed probe
+gcode = PROBE
+
+[menu __main __setup __calib __delta_calib_man __start]
+type = command
+name = Start probing
+gcode = 
+	G28
+	DELTA_CALIBRATE METHOD=manual
+
+[menu __main __setup __calib __delta_calib_man __move_z]
+type = input
+name = Move Z: {'%03.2f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_step = 1
+realtime = True
+gcode = 
+	{%- if menu.event == 'change' -%}
+	G1 Z{'%.2f' % menu.input}
+	{%- elif menu.event == 'long_click' -%}
+	G1 Z{'%.2f' % menu.input}
+	SAVE_GCODE_STATE NAME=__move__axis
+	G91
+	G1 Z2
+	G1 Z-2
+	RESTORE_GCODE_STATE NAME=__move__axis
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __test_z]
+type = input
+name = Test Z: {['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+input = 6
+input_min = 0
+input_max = 11
+input_step = 1
+gcode = 
+	{%- if menu.event == 'long_click' -%}
+	TESTZ Z={['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __accept]
+type = command
+name = Accept
+gcode = ACCEPT
+
+[menu __main __setup __calib __delta_calib_man __abort]
+type = command
+name = Abort
+gcode = ABORT
+
+[menu __main __setup __dump]
+type = command
+name = Dump parameters
+gcode = 
+	{% for name1 in printer %}
+	{% for name2 in printer[name1] %}
+	{ action_respond_info("printer['%s'].%s = %s"
+	% (name1, name2, printer[name1][name2])) }
+	{% else %}
+	{ action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
+	{% endfor %}
+	{% endfor %}
+=======================
+Declaration of '__main' hides previous menuitem declaration
+Declaration of '__main __tune' hides previous menuitem declaration
+Declaration of '__main __tune __speed' hides previous menuitem declaration
+Declaration of '__main __tune __flow' hides previous menuitem declaration
+Declaration of '__main __tune __offsetz' hides previous menuitem declaration
+Declaration of '__main __octoprint' hides previous menuitem declaration
+Declaration of '__main __octoprint __pause' hides previous menuitem declaration
+Declaration of '__main __octoprint __resume' hides previous menuitem declaration
+Declaration of '__main __octoprint __abort' hides previous menuitem declaration
+Declaration of '__main __sdcard' hides previous menuitem declaration
+Declaration of '__main __sdcard __start' hides previous menuitem declaration
+Declaration of '__main __sdcard __resume' hides previous menuitem declaration
+Declaration of '__main __sdcard __pause' hides previous menuitem declaration
+Declaration of '__main __sdcard __cancel' hides previous menuitem declaration
+Declaration of '__main __control' hides previous menuitem declaration
+Declaration of '__main __control __home' hides previous menuitem declaration
+Declaration of '__main __control __homez' hides previous menuitem declaration
+Declaration of '__main __control __homexy' hides previous menuitem declaration
+Declaration of '__main __control __disable' hides previous menuitem declaration
+Declaration of '__main __control __fanonoff' hides previous menuitem declaration
+Declaration of '__main __control __fanspeed' hides previous menuitem declaration
+Declaration of '__main __control __caselightonoff' hides previous menuitem declaration
+Declaration of '__main __control __caselightpwm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __temp' hides previous menuitem declaration
+Declaration of '__main __temp __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotend1_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotbed_target' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __all' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotbed' hides previous menuitem declaration
+Declaration of '__main __filament' hides previous menuitem declaration
+Declaration of '__main __filament __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __filament __loadf' hides previous menuitem declaration
+Declaration of '__main __filament __loads' hides previous menuitem declaration
+Declaration of '__main __filament __unloadf' hides previous menuitem declaration
+Declaration of '__main __filament __unloads' hides previous menuitem declaration
+Declaration of '__main __filament __feed' hides previous menuitem declaration
+Declaration of '__main __setup' hides previous menuitem declaration
+Declaration of '__main __setup __save_config' hides previous menuitem declaration
+Declaration of '__main __setup __restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __host_restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __firmware_restart' hides previous menuitem declaration
+Declaration of '__main __setup __tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotend_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotbed_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __calib' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_auto' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man' hides previous menuitem declaration
+Declaration of '__main __setup __calib __bedprobe' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __start' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __move_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __test_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __accept' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __abort' hides previous menuitem declaration
+Declaration of '__main __setup __dump' hides previous menuitem declaration
+Extruder max_extrude_ratio=0.266081
+mcu 'mcu': Starting serial connect
+webhooks client 547915566672: New connection
+webhooks client 547915566672: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+Loaded MCU 'mcu' 94 commands (v0.10.0-286-gfe2974b8 / gcc: (GCC) 5.4.0 binutils: (GNU Binutils) 2.26.20160125)
+MCU 'mcu' config: ADC_MAX=1023 BUS_PINS_spi=PB3,PB2,PB1 BUS_PINS_twi=PD0,PD1 CLOCK_FREQ=16000000 MCU=atmega2560 PWM_MAX=255 RECEIVE_WINDOW=192 RESERVE_PINS_serial=PE0,PE1 SERIAL_BAUD=250000 STATS_SUMSQ_BASE=256
+mcu 'Rpi': Starting connect
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+webhooks client 547915566672: Disconnected
+Restarting printer
+Start printer at Sat Dec 16 23:46:51 2023 (1702792011.2 1095.5)
+===== Config file =====
+[virtual_sdcard]
+path = ~/.octoprint/uploads/
+on_error_gcode = CANCEL_PRINT
+
+[pause_resume]
+recover_velocity = 50
+
+[display_status]
+
+[respond]
+
+[gcode_macro CANCEL_PRINT]
+description = Cancel the actual running print
+rename_existing = CANCEL_PRINT_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set allow_park = client.park_at_cancel | default(false) | lower == 'true' %}
+	{% set retract = client.cancel_retract | default(5.0) | abs %}
+	
+	{% set park_x = "" if (client.park_at_cancel_x | default(none) is none)
+	else "X=" ~ client.park_at_cancel_x %}
+	{% set park_y = "" if (client.park_at_cancel_y | default(none) is none)
+	else "Y=" ~ client.park_at_cancel_y %}
+	{% set custom_park = park_x | length > 0 or park_y | length > 0 %}
+	
+	
+	{% if printer['gcode_macro RESUME'].restore_idle_timeout > 0 %}
+	SET_IDLE_TIMEOUT TIMEOUT={printer['gcode_macro RESUME'].restore_idle_timeout}
+	{% endif %}
+	{% if (custom_park or not printer.pause_resume.is_paused) and allow_park %} _TOOLHEAD_PARK_PAUSE_CANCEL {park_x} {park_y} {% endif %}
+	_CLIENT_RETRACT LENGTH={retract}
+	TURN_OFF_HEATERS
+	M106 S0
+	{client.user_cancel_macro | default("")}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	SET_PAUSE_AT_LAYER ENABLE=0 LAYER=0
+	CANCEL_PRINT_BASE
+
+[gcode_macro PAUSE]
+description = Pause the actual running print
+rename_existing = PAUSE_BASE
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set idle_timeout = client.idle_timeout | default(0) %}
+	{% set temp = printer[printer.toolhead.extruder].target if printer.toolhead.extruder != '' else 0 %}
+	{% set restore = False if printer.toolhead.extruder == ''
+	else True  if params.RESTORE | default(1) | int == 1 else False %}
+	
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=last_extruder_temp VALUE="{{'restore': restore, 'temp': temp}}"
+	
+	{% if idle_timeout > 0 %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=restore_idle_timeout VALUE={printer.configfile.settings.idle_timeout.timeout}
+	SET_IDLE_TIMEOUT TIMEOUT={idle_timeout}
+	{% endif %}
+	PAUSE_BASE
+	{client.user_pause_macro | default("")}
+	_TOOLHEAD_PARK_PAUSE_CANCEL {rawparams}
+
+[gcode_macro RESUME]
+description = Resume the actual running print
+rename_existing = RESUME_BASE
+variable_last_extruder_temp = {'restore': False, 'temp': 0}
+variable_restore_idle_timeout = 0
+variable_idle_state = False
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set sp_move = client.speed_move | default(velocity) %}
+	{% set runout_resume = True if client.runout_sensor | default("") == ""
+	else True if not printer[client.runout_sensor].enabled
+	else printer[client.runout_sensor].filament_detected %}
+	{% set can_extrude = True if printer.toolhead.extruder == ''
+	else printer[printer.toolhead.extruder].can_extrude %}
+	{% set do_resume = False %}
+	
+	
+	{% if printer.idle_timeout.state | upper == "IDLE" or idle_state %}
+	SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=idle_state VALUE=False
+	{% if last_extruder_temp.restore %}
+	
+	RESPOND TYPE=echo MSG='{"Restoring \"%s\" temperature to %3.1f\u00B0C, this may take some time" % (printer.toolhead.extruder, last_extruder_temp.temp) }'
+	M109 S{last_extruder_temp.temp}
+	{% set do_resume = True %}
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	
+	{% elif can_extrude %}
+	{% set do_resume = True %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" not hot enough, please heat up again and press RESUME" % printer.toolhead.extruder}'
+	{% endif %}
+	{% if runout_resume %}
+	{% if do_resume %}
+	{% if restore_idle_timeout > 0 %} SET_IDLE_TIMEOUT TIMEOUT={restore_idle_timeout} {% endif %}
+	{client.user_resume_macro | default("")}
+	_CLIENT_EXTRUDE
+	RESUME_BASE VELOCITY={params.VELOCITY | default(sp_move)}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=error MSG='{"Resume aborted !!! \"%s\" detects no filament, please load filament and press RESUME" % (client.runout_sensor.split(" "))[1]}'
+	{% endif %}
+
+[gcode_macro SET_PAUSE_NEXT_LAYER]
+description = Enable a pause if the next layer is reached
+gcode = 
+	{% set pause_next_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_next_layer %}
+	{% set ENABLE = params.ENABLE | default(1) | int != 0 %}
+	{% set MACRO = params.MACRO | default(pause_next_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_next_layer VALUE="{{ 'enable': ENABLE, 'call': MACRO }}"
+
+[gcode_macro SET_PAUSE_AT_LAYER]
+description = Enable/disable a pause if a given layer number is reached
+gcode = 
+	{% set pause_at_layer = printer['gcode_macro SET_PRINT_STATS_INFO'].pause_at_layer %}
+	{% set ENABLE = params.ENABLE | int != 0 if params.ENABLE is defined
+	else params.LAYER is defined %}
+	{% set LAYER = params.LAYER | default(pause_at_layer.layer) | int %}
+	{% set MACRO = params.MACRO | default(pause_at_layer.call, True) %}
+	SET_GCODE_VARIABLE MACRO=SET_PRINT_STATS_INFO VARIABLE=pause_at_layer VALUE="{{ 'enable': ENABLE, 'layer': LAYER, 'call': MACRO }}"
+
+[gcode_macro SET_PRINT_STATS_INFO]
+rename_existing = SET_PRINT_STATS_INFO_BASE
+description = Overwrite, to get pause_next_layer and pause_at_layer feature
+variable_pause_next_layer = { 'enable': False, 'call': "PAUSE" }
+variable_pause_at_layer = { 'enable': False, 'layer': 0, 'call': "PAUSE" }
+gcode = 
+	{% if pause_next_layer.enable %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_next_layer" % pause_next_layer.call}'
+	{pause_next_layer.call}
+	SET_PAUSE_NEXT_LAYER ENABLE=0
+	{% elif pause_at_layer.enable and params.CURRENT_LAYER is defined and params.CURRENT_LAYER | int == pause_at_layer.layer %}
+	RESPOND TYPE=echo MSG='{"%s, forced by pause_at_layer [%d]" % (pause_at_layer.call, pause_at_layer.layer)}'
+	{pause_at_layer.call}
+	SET_PAUSE_AT_LAYER ENABLE=0
+	{% endif %}
+	SET_PRINT_STATS_INFO_BASE {rawparams}
+
+[gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL]
+description = Helper: park toolhead used in PAUSE and CANCEL_PRINT
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set velocity = printer.configfile.settings.pause_resume.recover_velocity %}
+	{% set use_custom     = client.use_custom_pos | default(false) | lower == 'true' %}
+	{% set custom_park_x  = client.custom_park_x | default(0.0) %}
+	{% set custom_park_y  = client.custom_park_y | default(0.0) %}
+	{% set park_dz        = client.custom_park_dz | default(2.0) | abs %}
+	{% set sp_hop         = client.speed_hop | default(15) * 60 %}
+	{% set sp_move        = client.speed_move | default(velocity) * 60 %}
+	
+	{% set origin    = printer.gcode_move.homing_origin %}
+	{% set act       = printer.gcode_move.gcode_position %}
+	{% set max       = printer.toolhead.axis_maximum %}
+	{% set cone      = printer.toolhead.cone_start_z | default(max.z) %}
+	{% set round_bed = True if printer.configfile.settings.printer.kinematics is in ['delta','polar','rotary_delta','winch']
+	else False %}
+	
+	{% set z_min = params.Z_MIN | default(0) | float %}
+	{% set z_park = [[(act.z + park_dz), z_min] | max, (max.z - origin.z)] | min %}
+	{% set x_park = params.X       if params.X is defined
+	else custom_park_x  if use_custom
+	else 0.0            if round_bed
+	else (max.x - 5.0) %}
+	{% set y_park = params.Y       if params.Y is defined
+	else custom_park_y  if use_custom
+	else (max.y - 5.0)  if round_bed and z_park < cone
+	else 0.0            if round_bed
+	else (max.y - 5.0) %}
+	
+	_CLIENT_RETRACT
+	{% if "xyz" in printer.toolhead.homed_axes %}
+	G90
+	G1 Z{z_park} F{sp_hop}
+	G1 X{x_park} Y{y_park} F{sp_move}
+	{% if not printer.gcode_move.absolute_coordinates %} G91 {% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='Printer not homed'
+	{% endif %}
+
+[gcode_macro _CLIENT_EXTRUDE]
+description = Extrudes, if the extruder is hot enough
+gcode = 
+	
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set use_fw_retract = (client.use_fw_retract | default(false) | lower == 'true') and (printer.firmware_retraction is defined) %}
+	{% set length = params.LENGTH | default(client.unretract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_unretract) | default(35) %}
+	{% set absolute_extrude = printer.gcode_move.absolute_extrude %}
+	
+	{% if printer.toolhead.extruder != '' %}
+	{% if printer[printer.toolhead.extruder].can_extrude %}
+	{% if use_fw_retract %}
+	{% if length < 0 %}
+	G10
+	{% else %}
+	G11
+	{% endif %}
+	{% else %}
+	M83
+	G1 E{length} F{(speed | float | abs) * 60}
+	{% if absolute_extrude %}
+	M82
+	{% endif %}
+	{% endif %}
+	{% else %}
+	RESPOND TYPE=echo MSG='{"\"%s\" not hot enough" % printer.toolhead.extruder}'
+	{% endif %}
+	{% endif %}
+
+[gcode_macro _CLIENT_RETRACT]
+description = Retracts, if the extruder is hot enough
+gcode = 
+	{% set client = printer['gcode_macro _CLIENT_VARIABLE'] | default({}) %}
+	{% set length = params.LENGTH | default(client.retract) | default(1.0) | float %}
+	{% set speed = params.SPEED | default(client.speed_retract) | default(35) %}
+	
+	_CLIENT_EXTRUDE LENGTH=-{length | float | abs} SPEED={speed | float | abs}
+
+[printer]
+kinematics = cartesian
+max_z_velocity = 14
+max_z_accel = 100
+max_velocity = 200
+max_accel = 1800
+max_accel_to_decel = 1800
+square_corner_velocity = 1
+
+[input_shaper]
+shaper_freq_x = 25.0
+shaper_freq_y = 25.0
+shaper_type = mzv
+damping_ratio_x = 0.1
+damping_ratio_y = 0.1
+
+[firmware_retraction]
+retract_length = 0.4
+retract_speed = 80
+unretract_extra_length = .01
+unretract_speed = 80
+
+[idle_timeout]
+gcode = 
+	SET_HEATER_TEMPERATURE HEATER=extruder
+	SET_HEATER_TEMPERATURE HEATER=heater_bed
+	M18
+timeout = 1200
+
+[extruder]
+step_pin = PA4
+dir_pin = !PA6
+enable_pin = !PA2
+microsteps = 16
+full_steps_per_rotation = 200
+rotation_distance = 7.7201944
+nozzle_diameter = 0.400
+filament_diameter = 1.750
+heater_pin = PB4
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK5
+min_temp = 5
+max_temp = 275
+control = pid
+pid_kp = 21.703
+pid_ki = 1.104
+pid_kd = 106.614
+max_extrude_only_distance = 100.00
+pressure_advance = 0.2443
+
+[stepper_x]
+step_pin = PF0
+dir_pin = PF1
+enable_pin = !PD7
+microsteps = 16
+rotation_distance = 39.66941833
+endstop_pin = ^PE5
+position_endstop = -2.1
+position_max = 309
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -2.1
+
+[stepper_y]
+step_pin = PF6
+dir_pin = PF7
+enable_pin = !PF2
+microsteps = 16
+rotation_distance = 39.16
+endstop_pin = ^PJ1
+position_endstop = -0.5
+position_max = 319
+homing_speed = 80
+second_homing_speed = 2.5
+position_min = -0.5
+
+[stepper_z]
+step_pin = PL3
+dir_pin = !PL1
+enable_pin = !PK0
+microsteps = 16
+rotation_distance = 7.928
+endstop_pin = ^PD3
+position_endstop = 0.25
+position_min = -1
+position_max = 399
+homing_speed = 10
+second_homing_speed = 2.5
+
+[heater_bed]
+heater_pin = PH5
+sensor_type = ATC Semitec 104GT-2
+sensor_pin = PK6
+min_temp = 5
+max_temp = 130
+control = pid
+pid_kp = 74.976
+pid_ki = 1.754
+pid_kd = 801.310
+
+[bed_screws]
+screw1 = 32,35
+screw1_name = Front Left
+screw2 = 271,35
+screw2_name = Front Right
+screw3 = 271,271
+screw3_name = Back Right
+screw4 = 32,271
+screw4_name = Back Left
+horizontal_move_z = 5
+probe_height = 0.20
+speed = 50
+probe_speed = 5
+
+[output_pin Heater_Fan]
+pin = ! Rpi:gpio19
+value = 0
+shutdown_value = 0
+
+[heater_generic Chamber_Heater]
+heater_pin = Rpi:gpio21
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+max_power = 1.0
+min_temp = 0
+max_temp = 80
+control = pid
+pid_kp = 71.121
+pid_ki = 1.148
+pid_kd = 1101.484
+gcode_id = C
+
+[verify_heater Chamber_Heater]
+max_error = 480
+check_gain_time = 600
+hysteresis = 5
+heating_gain = 1
+
+[duplicate_pin_override]
+pins = PK7
+
+[temperature_fan  Chamber_Fan]
+pin = Rpi:gpio18
+sensor_type = EPCOS 100K B57560G104F
+sensor_pin = PK7
+cycle_time = 0.01
+kick_start_time = 0.300
+off_below = 0.1
+gcode_id = F1
+control = watermark
+max_delta = 2.0
+min_temp = 0
+max_temp = 100
+target_temp = 90
+max_speed = 1.0
+min_speed = 0.3
+
+[adxl345]
+cs_pin = Rpi:None
+
+[resonance_tester]
+accel_chip = adxl345
+probe_points = 
+	150, 150, 20
+
+[gcode_macro M141]
+gcode = 
+	{% set CHAMBER_TEMP = params.S|default(21)|float %}
+	SET_PIN  PIN=Heater_Fan VALUE=1.0
+	SET_HEATER_TEMPERATURE HEATER=Chamber_Heater TARGET={CHAMBER_TEMP}
+	SET_TEMPERATURE_FAN_TARGET temperature_fan=Chamber_Fan target={CHAMBER_TEMP + 10} min_speed=.2 max_speed=.8
+
+[gcode_macro M900]
+gcode = 
+	M105
+
+[gcode_macro M300]
+gcode = 
+	
+	{% set S = params.S|default(1000)|int %}
+	
+	{% set P = params.P|default(100)|int %}
+	SET_PIN PIN=beeper VALUE=0.5 CYCLE_TIME={ 1.0/S if S > 0 else 1 }
+	G4 P{P}
+	SET_PIN PIN=beeper VALUE=0
+
+[gcode_macro START_PRINT]
+gcode = 
+	{% set BED_TEMP = params.BED_TEMP|default(60)|float %}
+	{% set EXTRUDER_TEMP = params.EXTRUDER_TEMP|default(190)|float %}
+	
+	M140 S{BED_TEMP}
+	
+	G90
+	
+	SET_GCODE_OFFSET Z=0.0
+	
+	G28
+	
+	G1 Z5 F3000
+	
+	G1 Z0.15 F300
+	
+	M190 S{BED_TEMP}
+	
+	M109 S{EXTRUDER_TEMP}
+
+[gcode_macro Tone1]
+gcode = 
+	M300 S200 P1000
+	M300 S500 P1000
+	M300 S1000 P1000
+	M300 S1500 P1000
+	M300 S400 P2000
+
+[output_pin Relay3]
+pin = ! Rpi:gpio16
+value = 0
+shutdown_value = 0
+
+[gcode_arcs]
+resolution = 0.1
+
+[fan]
+pin = PH6
+
+[mcu]
+serial = /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+baud = 250000
+
+[board_pins]
+aliases = 
+	
+	
+	EXP1_1=<5V>,    EXP1_3=PA7,    EXP1_5=PA3,	EXP1_7=PH1,	EXP1_9=PC2,
+	EXP1_2=<GND>,	EXP1_4=PA5,	EXP1_6=PA1,	EXP1_8=PH0,	EXP1_10=PC0,
+	
+	EXP2_1=<RST>,	EXP2_3=PG0,	EXP2_5=PB2,	EXP2_7=PB0,	EXP2_9=PB1,
+	EXP2_2=<GND>,	EXP2_4=PL0,	EXP2_6=PC4,	EXP2_8=PC6,	EXP2_10=PB3
+
+[display]
+lcd_type = st7920
+cs_pin = EXP1_7
+sclk_pin = EXP1_6
+sid_pin = EXP1_8
+encoder_pins = ^EXP2_6, ^EXP2_8
+click_pin = ^!EXP1_9
+
+[output_pin beeper]
+pin = EXP1_10
+pwm = True
+value = 0
+shutdown_value = 0
+cycle_time = 0.001
+
+[mcu Rpi]
+serial = /tmp/klipper_host_mcu
+
+[filament_switch_sensor fil_runout_sensor]
+pause_on_runout = True
+switch_pin = PE4
+
+[menu __main]
+type = list
+name = Main
+
+[menu __main __tune]
+type = list
+enable = {printer.idle_timeout.state == "Printing"}
+name = Tune
+
+[menu __main __tune __speed]
+type = input
+name = Speed: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.speed_factor}
+input_min = 0.01
+input_max = 5
+input_step = 0.01
+realtime = True
+gcode = 
+	M220 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __flow]
+type = input
+name = Flow: {'%3d' % (menu.input*100)}%
+input = {printer.gcode_move.extrude_factor}
+input_min = 0.01
+input_max = 2
+input_step = 0.01
+realtime = True
+gcode = 
+	M221 S{'%d' % (menu.input*100)}
+
+[menu __main __tune __offsetz]
+type = input
+name = Offset Z:{'%05.3f' % menu.input}
+input = {printer.gcode_move.homing_origin.z}
+input_min = -5
+input_max = 5
+input_step = 0.005
+realtime = True
+gcode = 
+	SET_GCODE_OFFSET Z={'%.3f' % menu.input} MOVE=1
+
+[menu __main __octoprint]
+type = list
+name = OctoPrint
+
+[menu __main __octoprint __pause]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Pause printing
+gcode = 
+	{action_respond_info('action:pause')}
+
+[menu __main __octoprint __resume]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Resume printing
+gcode = 
+	{action_respond_info('action:resume')}
+
+[menu __main __octoprint __abort]
+type = command
+enable = {printer.idle_timeout.state == "Printing"}
+name = Abort printing
+gcode = 
+	{action_respond_info('action:cancel')}
+
+[menu __main __sdcard]
+type = vsdlist
+enable = {('virtual_sdcard' in printer)}
+name = SD Card
+
+[menu __main __sdcard __start]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.virtual_sdcard.file_path and not printer.virtual_sdcard.is_active}
+name = Start printing
+gcode = M24
+
+[menu __main __sdcard __resume]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "paused"}
+name = Resume printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	RESUME
+	{% else %}
+	M24
+	{% endif %}
+
+[menu __main __sdcard __pause]
+type = command
+enable = {('virtual_sdcard' in printer) and printer.print_stats.state == "printing"}
+name = Pause printing
+gcode = 
+	{% if "pause_resume" in printer %}
+	PAUSE
+	{% else %}
+	M25
+	{% endif %}
+
+[menu __main __sdcard __cancel]
+type = command
+enable = {('virtual_sdcard' in printer) and (printer.print_stats.state == "printing" or printer.print_stats.state == "paused")}
+name = Cancel printing
+gcode = 
+	{% if 'pause_resume' in printer %}
+	CANCEL_PRINT
+	{% else %}
+	M25
+	M27
+	M26 S0
+	TURN_OFF_HEATERS
+	{% if printer.toolhead.position.z <= printer.toolhead.axis_maximum.z - 5 %}
+	G91
+	G0 Z5 F1000
+	G90
+	{% endif %}
+	{% endif %}
+
+[menu __main __control]
+type = list
+name = Control
+
+[menu __main __control __home]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home All
+gcode = G28
+
+[menu __main __control __homez]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home Z
+gcode = G28 Z
+
+[menu __main __control __homexy]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Home X/Y
+gcode = G28 X Y
+
+[menu __main __control __disable]
+type = command
+name = Steppers off
+gcode = 
+	M84
+	M18
+
+[menu __main __control __fanonoff]
+type = input
+enable = {'fan' in printer}
+name = Fan: {'ON ' if menu.input else 'OFF'}
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	M106 S{255 if menu.input else 0}
+
+[menu __main __control __fanspeed]
+type = input
+enable = {'fan' in printer}
+name = Fan speed: {'%3d' % (menu.input*100)}%
+input = {printer.fan.speed}
+input_min = 0
+input_max = 1
+input_step = 0.01
+gcode = 
+	M106 S{'%d' % (menu.input*255)}
+
+[menu __main __control __caselightonoff]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'ON ' if menu.input else 'OFF'}
+input = {printer['output_pin caselight'].value}
+input_min = 0
+input_max = 1
+input_step = 1
+gcode = 
+	SET_PIN PIN=caselight VALUE={1 if menu.input else 0}
+
+[menu __main __control __caselightpwm]
+type = input
+enable = {'output_pin caselight' in printer}
+name = Lights: {'%3d' % (menu.input*100)}%
+input = {printer['output_pin caselight'].value}
+input_min = 0.0
+input_max = 1.0
+input_step = 0.01
+gcode = 
+	SET_PIN PIN=caselight VALUE={menu.input}
+
+[menu __main __control __move_10mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 10mm
+
+[menu __main __control __move_10mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_10mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 10.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 1mm
+
+[menu __main __control __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_1mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move 0.1mm
+
+[menu __main __control __move_01mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_z]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move Z:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_min = 0
+input_max = {printer.toolhead.axis_maximum.z}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Z{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __control __move_01mm __axis_e]
+type = input
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Move E:{'%+06.1f' % menu.input}
+input = 0
+input_min = -{printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_max = {printer.configfile.config.extruder.max_extrude_only_distance|default(50)}
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	M83
+	G1 E{menu.input} F240
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __temp]
+type = list
+name = Temperature
+
+[menu __main __temp __hotend0_target]
+type = input
+enable = {('extruder' in printer) and ('extruder' in printer.heaters.available_heaters)}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotend1_target]
+type = input
+enable = {('extruder1' in printer) and ('extruder1' in printer.heaters.available_heaters)}
+name = {"Ex1:%3.0f (%4.0f)" % (menu.input, printer.extruder1.temperature)}
+input = {printer.extruder1.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder1.max_temp}
+input_step = 1
+gcode = M104 T1 S{'%.0f' % menu.input}
+
+[menu __main __temp __hotbed_target]
+type = input
+enable = {'heater_bed' in printer}
+name = {"Bed:%3.0f (%4.0f)" % (menu.input, printer.heater_bed.temperature)}
+input = {printer.heater_bed.target}
+input_min = 0
+input_max = {printer.configfile.config.heater_bed.max_temp}
+input_step = 1
+gcode = M140 S{'%.0f' % menu.input}
+
+[menu __main __temp __preheat_pla]
+type = list
+name = Preheat PLA
+
+[menu __main __temp __preheat_pla __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S60
+	M104 S200
+
+[menu __main __temp __preheat_pla __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S200
+
+[menu __main __temp __preheat_pla __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S60
+
+[menu __main __temp __preheat_abs]
+type = list
+name = Preheat ABS
+
+[menu __main __temp __preheat_abs __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Preheat all
+gcode = 
+	M140 S110
+	M104 S245
+
+[menu __main __temp __preheat_abs __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Preheat hotend
+gcode = M104 S245
+
+[menu __main __temp __preheat_abs __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Preheat hotbed
+gcode = M140 S110
+
+[menu __main __temp __cooldown]
+type = list
+name = Cooldown
+
+[menu __main __temp __cooldown __all]
+type = command
+enable = {('extruder' in printer) and ('heater_bed' in printer)}
+name = Cooldown all
+gcode = 
+	M104 S0
+	M140 S0
+
+[menu __main __temp __cooldown __hotend]
+type = command
+enable = {'extruder' in printer}
+name = Cooldown hotend
+gcode = M104 S0
+
+[menu __main __temp __cooldown __hotbed]
+type = command
+enable = {'heater_bed' in printer}
+name = Cooldown hotbed
+gcode = M140 S0
+
+[menu __main __filament]
+type = list
+name = Filament
+
+[menu __main __filament __hotend0_target]
+type = input
+enable = {'extruder' in printer}
+name = {"Ex0:%3.0f (%4.0f)" % (menu.input, printer.extruder.temperature)}
+input = {printer.extruder.target}
+input_min = 0
+input_max = {printer.configfile.config.extruder.max_temp}
+input_step = 1
+gcode = M104 T0 S{'%.0f' % menu.input}
+
+[menu __main __filament __loadf]
+type = command
+name = Load Fil. fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __loads]
+type = command
+name = Load Fil. slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloadf]
+type = command
+name = Unload Fil.fast
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F960
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __unloads]
+type = command
+name = Unload Fil.slow
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E-50 F240
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __filament __feed]
+type = input
+name = Feed: {'%.1f' % menu.input}
+input = 5
+input_step = 0.1
+gcode = 
+	SAVE_GCODE_STATE NAME=__filament__load
+	M83
+	G1 E{'%.1f' % menu.input} F60
+	RESTORE_GCODE_STATE NAME=__filament__load
+
+[menu __main __setup]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Setup
+
+[menu __main __setup __save_config]
+type = command
+name = Save config
+gcode = SAVE_CONFIG
+
+[menu __main __setup __restart]
+type = list
+name = Restart
+
+[menu __main __setup __restart __host_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart host
+gcode = RESTART
+
+[menu __main __setup __restart __firmware_restart]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Restart FW
+gcode = FIRMWARE_RESTART
+
+[menu __main __setup __tuning]
+type = list
+name = PID tuning
+
+[menu __main __setup __tuning __hotend_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('extruder' in printer)}
+name = Tune Hotend PID
+gcode = PID_CALIBRATE HEATER=extruder TARGET=210 WRITE_FILE=1
+
+[menu __main __setup __tuning __hotbed_pid_tuning]
+type = command
+enable = {(not printer.idle_timeout.state == "Printing") and ('heater_bed' in printer)}
+name = Tune Hotbed PID
+gcode = PID_CALIBRATE HEATER=heater_bed TARGET=60 WRITE_FILE=1
+
+[menu __main __setup __calib]
+type = list
+name = Calibration
+
+[menu __main __setup __calib __adjust_bed_screw]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Tram Bed
+index = 0
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramABS]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start ABS
+gcode = 
+	G28
+	G0 F1500
+	M104 S200
+	M140 S100
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _start_tramPLA]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Start PLA
+gcode = 
+	G28
+	G0 F1500
+	M104 S180
+	M140 S60
+	BED_SCREWS_ADJUST
+
+[menu __main __setup __calib __adjust_bed_screw _adjusted_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Next
+gcode = 
+	ADJUSTED
+
+[menu __main __setup __calib __adjust_bed_screw _accept_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Accept Next
+gcode = 
+	ACCEPT
+
+[menu __main __setup __calib __adjust_bed_screw _abort_tram]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Cancel
+gcode = 
+	ABORT
+
+[menu __main __setup __calib __adjust_bed_screw __move_1mm __axis_x]
+type = input
+name = Move X:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.x}
+input_min = {printer.toolhead.axis_minimum.x}
+input_max = {printer.toolhead.axis_maximum.x}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 X{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu ___main __setup __calib __adjust_bed_screw __move_1mm __axis_y]
+type = input
+name = Move Y:{'%05.1f' % menu.input}
+input = {printer.gcode_move.gcode_position.y}
+input_min = {printer.toolhead.axis_minimum.y}
+input_max = {printer.toolhead.axis_maximum.y}
+input_step = 1.0
+gcode = 
+	SAVE_GCODE_STATE NAME=__move__axis
+	G90
+	G1 Y{menu.input}
+	RESTORE_GCODE_STATE NAME=__move__axis
+
+[menu __main __setup __calib __delta_calib_auto]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. auto
+gcode = 
+	G28
+	DELTA_CALIBRATE
+
+[menu __main __setup __calib __delta_calib_man]
+type = list
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Delta cal. man
+
+[menu __main __setup __calib __bedprobe]
+type = command
+enable = {not printer.idle_timeout.state == "Printing"}
+name = Bed probe
+gcode = PROBE
+
+[menu __main __setup __calib __delta_calib_man __start]
+type = command
+name = Start probing
+gcode = 
+	G28
+	DELTA_CALIBRATE METHOD=manual
+
+[menu __main __setup __calib __delta_calib_man __move_z]
+type = input
+name = Move Z: {'%03.2f' % menu.input}
+input = {printer.gcode_move.gcode_position.z}
+input_step = 1
+realtime = True
+gcode = 
+	{%- if menu.event == 'change' -%}
+	G1 Z{'%.2f' % menu.input}
+	{%- elif menu.event == 'long_click' -%}
+	G1 Z{'%.2f' % menu.input}
+	SAVE_GCODE_STATE NAME=__move__axis
+	G91
+	G1 Z2
+	G1 Z-2
+	RESTORE_GCODE_STATE NAME=__move__axis
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __test_z]
+type = input
+name = Test Z: {['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+input = 6
+input_min = 0
+input_max = 11
+input_step = 1
+gcode = 
+	{%- if menu.event == 'long_click' -%}
+	TESTZ Z={['++','+','+.01','+.05','+.1','+.5','-.5','-.1','-.05','-.01','-','--'][menu.input|int]}
+	{%- endif -%}
+
+[menu __main __setup __calib __delta_calib_man __accept]
+type = command
+name = Accept
+gcode = ACCEPT
+
+[menu __main __setup __calib __delta_calib_man __abort]
+type = command
+name = Abort
+gcode = ABORT
+
+[menu __main __setup __dump]
+type = command
+name = Dump parameters
+gcode = 
+	{% for name1 in printer %}
+	{% for name2 in printer[name1] %}
+	{ action_respond_info("printer['%s'].%s = %s"
+	% (name1, name2, printer[name1][name2])) }
+	{% else %}
+	{ action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
+	{% endfor %}
+	{% endfor %}
+=======================
+Declaration of '__main' hides previous menuitem declaration
+Declaration of '__main __tune' hides previous menuitem declaration
+Declaration of '__main __tune __speed' hides previous menuitem declaration
+Declaration of '__main __tune __flow' hides previous menuitem declaration
+Declaration of '__main __tune __offsetz' hides previous menuitem declaration
+Declaration of '__main __octoprint' hides previous menuitem declaration
+Declaration of '__main __octoprint __pause' hides previous menuitem declaration
+Declaration of '__main __octoprint __resume' hides previous menuitem declaration
+Declaration of '__main __octoprint __abort' hides previous menuitem declaration
+Declaration of '__main __sdcard' hides previous menuitem declaration
+Declaration of '__main __sdcard __start' hides previous menuitem declaration
+Declaration of '__main __sdcard __resume' hides previous menuitem declaration
+Declaration of '__main __sdcard __pause' hides previous menuitem declaration
+Declaration of '__main __sdcard __cancel' hides previous menuitem declaration
+Declaration of '__main __control' hides previous menuitem declaration
+Declaration of '__main __control __home' hides previous menuitem declaration
+Declaration of '__main __control __homez' hides previous menuitem declaration
+Declaration of '__main __control __homexy' hides previous menuitem declaration
+Declaration of '__main __control __disable' hides previous menuitem declaration
+Declaration of '__main __control __fanonoff' hides previous menuitem declaration
+Declaration of '__main __control __fanspeed' hides previous menuitem declaration
+Declaration of '__main __control __caselightonoff' hides previous menuitem declaration
+Declaration of '__main __control __caselightpwm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_10mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_1mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_x' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_y' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_z' hides previous menuitem declaration
+Declaration of '__main __control __move_01mm __axis_e' hides previous menuitem declaration
+Declaration of '__main __temp' hides previous menuitem declaration
+Declaration of '__main __temp __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotend1_target' hides previous menuitem declaration
+Declaration of '__main __temp __hotbed_target' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_pla __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __all' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __preheat_abs __hotbed' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __all' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotend' hides previous menuitem declaration
+Declaration of '__main __temp __cooldown __hotbed' hides previous menuitem declaration
+Declaration of '__main __filament' hides previous menuitem declaration
+Declaration of '__main __filament __hotend0_target' hides previous menuitem declaration
+Declaration of '__main __filament __loadf' hides previous menuitem declaration
+Declaration of '__main __filament __loads' hides previous menuitem declaration
+Declaration of '__main __filament __unloadf' hides previous menuitem declaration
+Declaration of '__main __filament __unloads' hides previous menuitem declaration
+Declaration of '__main __filament __feed' hides previous menuitem declaration
+Declaration of '__main __setup' hides previous menuitem declaration
+Declaration of '__main __setup __save_config' hides previous menuitem declaration
+Declaration of '__main __setup __restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __host_restart' hides previous menuitem declaration
+Declaration of '__main __setup __restart __firmware_restart' hides previous menuitem declaration
+Declaration of '__main __setup __tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotend_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __tuning __hotbed_pid_tuning' hides previous menuitem declaration
+Declaration of '__main __setup __calib' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_auto' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man' hides previous menuitem declaration
+Declaration of '__main __setup __calib __bedprobe' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __start' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __move_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __test_z' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __accept' hides previous menuitem declaration
+Declaration of '__main __setup __calib __delta_calib_man __abort' hides previous menuitem declaration
+Declaration of '__main __setup __dump' hides previous menuitem declaration
+Extruder max_extrude_ratio=0.266081
+mcu 'mcu': Starting serial connect
+webhooks client 547912482000: New connection
+webhooks client 547912482000: Client info {'program': 'Moonraker', 'version': 'v0.8.0-209-g4235789'}
+Loaded MCU 'mcu' 94 commands (v0.10.0-286-gfe2974b8 / gcc: (GCC) 5.4.0 binutils: (GNU Binutils) 2.26.20160125)
+MCU 'mcu' config: ADC_MAX=1023 BUS_PINS_spi=PB3,PB2,PB1 BUS_PINS_twi=PD0,PD1 CLOCK_FREQ=16000000 MCU=atmega2560 PWM_MAX=255 RECEIVE_WINDOW=192 RESERVE_PINS_serial=PE0,PE1 SERIAL_BAUD=250000 STATS_SUMSQ_BASE=256
+mcu 'Rpi': Starting connect
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+mcu 'Rpi': Unable to open port: [Errno 2] No such file or directory: '/tmp/klipper_host_mcu'
+MCU error during connect
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 803, in _mcu_identify
+    self._serial.connect_pipe(self._serialport)
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 165, in connect_pipe
+    self._error("Unable to connect")
+  File "/home/Ericmil8/klipper/klippy/serialhdl.py", line 61, in _error
+    raise error(self.warn_prefix + (msg % params))
+serialhdl.error: mcu 'Rpi': Unable to connect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 176, in _connect
+    self.send_event("klippy:mcu_identify")
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in send_event
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/klippy.py", line 263, in <listcomp>
+    return [cb(*params) for cb in self.event_handlers.get(event, [])]
+  File "/home/Ericmil8/klipper/klippy/mcu.py", line 806, in _mcu_identify
+    raise error(str(e))
+mcu.error: mcu 'Rpi': Unable to connect
+No build file /home/Ericmil8/klipper/klippy/../.config
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.dict
+No build file /home/Ericmil8/klipper/klippy/../out/klipper.elf
