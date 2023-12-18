@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 # Set parent directory path
 parent_path=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd -P)
@@ -31,4 +31,4 @@ git filter-branch --force --index-filter \
 #git rm -rf --cached "$parent_path"/.env
 git add "$parent_path"
 git commit -m "New backup from $(date +"%d-%m-%y")"
-git push https://"$github_token"@github.com/"$github_username"/"$github_repository".git
+git push --set-upstream https://"$github_token"@github.com/"$github_username"/"$github_repository".git
